@@ -1,6 +1,42 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { categoriesGlossaire, glossaire } from "../data/glossaire";
+import { paquetsRegles } from "../data/flashcardsRegles";
+
+const CLE_STOCKAGE = "flashcards-srs-v1";
+const INTERVALLES_JOURS = [0, 1, 3, 7, 16];
+const UN_JOUR_MS = 24 * 60 * 60 * 1000;
+
+const PAQUETS = {
+  vocabulaire: { label: "Vocabulaire", data: glossaire, categories: categoriesGlossaire },
+  calcul: { label: paquetsRegles.calcul.label, data: paquetsRegles.calcul.cartes, categories: paquetsRegles.calcul.categories },
+  orthographe: { label: paquetsRegles.orthographe.label, data: paquetsRegles.orthographe.cartes, categories: paquetsRegles.orthographe.categories },
+};
+
+function idCarte(paquet, terme) {
+  return `${paquet}::${terme}`;
+}
+
+function chargerSrs() {
+  try {
+    const brut = localStorage.getItem(CLE_STOCKAGE);
+    return brut ? JSON.parse(brut) : {};
+  } catch {
+    return {};
+  }
+}
+
+function sauvegarderSrs(etat) {
+  try {
+    localStorage.setItem(CLE_STOCKAGE, JSON.stringify(etat));
+  } catch {
+    // stockage indisponible (navigation privée, quota...) : la session continue sans persistance
+  }
+}
+
+function metaCarte(srs, id) {
+  return srs[id] || { boite: 0, prochaine: 0 };
+}
 
 function melanger(tableau) {
   const copie = [...tableau];
@@ -11,84 +47,158 @@ function melanger(tableau) {
   return copie;
 }
 
-function nouveauPaquet(categorie) {
-  const source = categorie === "toutes" ? glossaire : glossaire.filter((m) => m.categorie === categorie);
-  return melanger(source);
+function cartesFiltrees(paquet, categorie) {
+  const source = PAQUETS[paquet].data;
+  return categorie === "toutes" ? source : source.filter((c) => c.categorie === categorie);
+}
+
+function construireFile(paquet, categorie, srs, avance) {
+  const maintenant = Date.now();
+  const candidats = cartesFiltrees(paquet, categorie);
+  const dues = avance
+    ? candidats
+    : candidats.filter((c) => metaCarte(srs, idCarte(paquet, c.terme)).prochaine <= maintenant);
+  return melanger(dues);
 }
 
 function Flashcards() {
+  const [paquet, setPaquet] = useState("vocabulaire");
   const [categorie, setCategorie] = useState("toutes");
-  const [paquet, setPaquet] = useState(() => nouveauPaquet("toutes"));
-  const [total, setTotal] = useState(paquet.length);
-  const [maitrisees, setMaitrisees] = useState(0);
+  const [srs, setSrs] = useState(chargerSrs);
+  const [file, setFile] = useState(() => construireFile("vocabulaire", "toutes", chargerSrs(), false));
+  const [dueInitial, setDueInitial] = useState(file.length);
+  const [modeAvance, setModeAvance] = useState(false);
   const [retournee, setRetournee] = useState(false);
 
-  const carte = paquet[0];
-  const progression = total === 0 ? 0 : Math.round((maitrisees / total) * 100);
+  const config = PAQUETS[paquet];
+  const carte = file[0];
+  const carteId = carte && idCarte(paquet, carte.terme);
+  const carteMeta = carte && metaCarte(srs, carteId);
+
+  const totalFiltre = cartesFiltrees(paquet, categorie).length;
+  const maitrisees = cartesFiltrees(paquet, categorie).filter(
+    (c) => metaCarte(srs, idCarte(paquet, c.terme)).boite >= INTERVALLES_JOURS.length - 1,
+  ).length;
+
+  function changerPaquet(cle) {
+    setPaquet(cle);
+    setCategorie("toutes");
+    setModeAvance(false);
+    setRetournee(false);
+    const nouvelleFile = construireFile(cle, "toutes", srs, false);
+    setFile(nouvelleFile);
+    setDueInitial(nouvelleFile.length);
+  }
 
   function changerCategorie(cle) {
-    const frais = nouveauPaquet(cle);
     setCategorie(cle);
-    setPaquet(frais);
-    setTotal(frais.length);
-    setMaitrisees(0);
+    setModeAvance(false);
     setRetournee(false);
+    const nouvelleFile = construireFile(paquet, cle, srs, false);
+    setFile(nouvelleFile);
+    setDueInitial(nouvelleFile.length);
   }
 
-  function recommencer() {
-    changerCategorie(categorie);
+  function reviserEnAvance() {
+    setModeAvance(true);
+    setRetournee(false);
+    const nouvelleFile = construireFile(paquet, categorie, srs, true);
+    setFile(nouvelleFile);
+    setDueInitial(nouvelleFile.length);
   }
 
-  function jeSavais() {
-    setPaquet((d) => d.slice(1));
-    setMaitrisees((m) => m + 1);
+  function reinitialiserPaquet() {
+    const idsPaquet = config.data.map((c) => idCarte(paquet, c.terme));
+    const nouveauSrs = { ...srs };
+    idsPaquet.forEach((id) => delete nouveauSrs[id]);
+    setSrs(nouveauSrs);
+    sauvegarderSrs(nouveauSrs);
+    setModeAvance(false);
     setRetournee(false);
+    const nouvelleFile = construireFile(paquet, categorie, nouveauSrs, false);
+    setFile(nouvelleFile);
+    setDueInitial(nouvelleFile.length);
   }
 
-  function aRevoir() {
-    setPaquet((d) => (d.length > 1 ? [...d.slice(1), d[0]] : d));
+  function noter(acquise) {
+    const meta = metaCarte(srs, carteId);
+    const nouvelleBoite = acquise ? Math.min(meta.boite + 1, INTERVALLES_JOURS.length - 1) : 0;
+    const prochaine = acquise ? Date.now() + INTERVALLES_JOURS[nouvelleBoite] * UN_JOUR_MS : Date.now();
+    const nouveauSrs = { ...srs, [carteId]: { boite: nouvelleBoite, prochaine } };
+    setSrs(nouveauSrs);
+    sauvegarderSrs(nouveauSrs);
     setRetournee(false);
+    if (acquise) {
+      setFile((f) => f.slice(1));
+    } else {
+      setFile((f) => (f.length > 1 ? [...f.slice(1), f[0]] : f));
+    }
   }
 
   return (
     <div className="learning-page">
       <header className="learning-hero learning-hero--compact">
-        <p className="home-eyebrow">Mémorisation active</p>
+        <p className="home-eyebrow">Mémorisation active · révision espacée</p>
         <h1>Flashcards</h1>
         <p>
-          Lis le terme, essaie de formuler sa définition dans ta tête, puis retourne la carte
-          pour vérifier. Sois honnête : c'est ce qui rend la répétition utile.
+          Chaque carte connue s'éloigne dans le temps (1, 3, 7, 16 jours...), chaque carte
+          hésitante revient tout de suite. Reviens régulièrement : seules les cartes dues
+          aujourd'hui te sont proposées.
         </p>
       </header>
 
-      <div className="glossary-filters" role="group" aria-label="Choisir un thème" style={{ marginBottom: "1.5rem" }}>
+      <div className="flashcard-deck-tabs" role="group" aria-label="Choisir un paquet">
+        {Object.entries(PAQUETS).map(([cle, p]) => (
+          <button
+            key={cle}
+            className={`flashcard-deck-tab${paquet === cle ? " flashcard-deck-tab--active" : ""}`}
+            onClick={() => changerPaquet(cle)}
+          >
+            {p.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="glossary-filters" role="group" aria-label="Filtrer par thème" style={{ marginBottom: "1.5rem" }}>
         <button
           className={`glossary-chip${categorie === "toutes" ? " glossary-chip--active" : ""}`}
           onClick={() => changerCategorie("toutes")}
         >
-          Toutes ({glossaire.length})
+          Toutes ({config.data.length})
         </button>
-        {Object.entries(categoriesGlossaire).map(([cle, label]) => (
+        {Object.entries(config.categories).map(([cle, label]) => (
           <button
             key={cle}
             className={`glossary-chip${categorie === cle ? " glossary-chip--active" : ""}`}
             onClick={() => changerCategorie(cle)}
           >
-            {label} ({glossaire.filter((m) => m.categorie === cle).length})
+            {label} ({config.data.filter((c) => c.categorie === cle).length})
           </button>
         ))}
       </div>
 
       <div className="flashcard-progress" aria-label="Progression">
-        <div className="flashcard-progress__bar"><div style={{ width: `${progression}%` }} /></div>
-        <span>{maitrisees} / {total} maîtrisées</span>
+        <div className="flashcard-progress__bar"><div style={{ width: `${totalFiltre === 0 ? 0 : Math.round((maitrisees / totalFiltre) * 100)}%` }} /></div>
+        <span>{maitrisees} / {totalFiltre} en boîte maîtrisée</span>
       </div>
 
       {!carte ? (
         <div className="flashcard-done">
-          <h2>Paquet terminé !</h2>
-          <p>Tu as révisé les {total} termes de ce thème.</p>
-          <button className="home-button home-button--primary" onClick={recommencer}>Recommencer ce paquet</button>
+          {dueInitial === 0 ? (
+            <>
+              <h2>Rien à réviser pour l'instant</h2>
+              <p>Aucune carte n'est due aujourd'hui sur ce thème — reviens plus tard, ou révise en avance.</p>
+            </>
+          ) : (
+            <>
+              <h2>Session terminée !</h2>
+              <p>Tu as revu {dueInitial} carte{dueInitial > 1 ? "s" : ""} sur ce thème pour aujourd'hui.</p>
+            </>
+          )}
+          <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <button className="home-button home-button--secondary" onClick={reviserEnAvance}>Réviser quand même</button>
+            <button className="home-button home-button--primary" onClick={reinitialiserPaquet}>Réinitialiser ce paquet</button>
+          </div>
         </div>
       ) : (
         <>
@@ -101,11 +211,14 @@ function Flashcards() {
             >
               <div className="flashcard__inner">
                 <div className="flashcard__face flashcard__face--recto">
-                  <span className={`glossary-card__tag glossary-card__tag--${carte.categorie}`}>
-                    {categoriesGlossaire[carte.categorie]}
-                  </span>
+                  <div className="flashcard__meta">
+                    <span className={`glossary-card__tag glossary-card__tag--${carte.categorie}`}>
+                      {config.categories[carte.categorie]}
+                    </span>
+                    <span className="flashcard__boite">Boîte {carteMeta.boite + 1}/5</span>
+                  </div>
                   <strong>{carte.terme}</strong>
-                  <small>Clique pour révéler la définition</small>
+                  <small>Clique pour révéler la réponse</small>
                 </div>
                 <div className="flashcard__face flashcard__face--verso">
                   <p>{carte.definition}</p>
@@ -116,16 +229,19 @@ function Flashcards() {
 
           {retournee && (
             <div className="flashcard-actions">
-              <button className="flashcard-action flashcard-action--revoir" onClick={aRevoir}>
-                ↻ À revoir
+              <button className="flashcard-action flashcard-action--revoir" onClick={() => noter(false)}>
+                ↻ À revoir bientôt
               </button>
-              <button className="flashcard-action flashcard-action--su" onClick={jeSavais}>
+              <button className="flashcard-action flashcard-action--su" onClick={() => noter(true)}>
                 ✓ Je savais
               </button>
             </div>
           )}
 
-          <p className="flashcard-remaining">{paquet.length} carte{paquet.length > 1 ? "s" : ""} restante{paquet.length > 1 ? "s" : ""} dans ce passage.</p>
+          <p className="flashcard-remaining">
+            {file.length} carte{file.length > 1 ? "s" : ""} restante{file.length > 1 ? "s" : ""}
+            {modeAvance ? " (révision en avance, hors planning)" : " dans la session du jour"}.
+          </p>
         </>
       )}
 

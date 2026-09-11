@@ -4,7 +4,14 @@ function Navbar() {
   return (
     <nav className="site-nav" aria-label="Navigation principale">
       <div className="site-nav__inner">
-        <Link to="/" className="site-nav__brand">Objectif DGFiP</Link>
+        <Link to="/" className="site-nav__brand">
+          <svg className="site-nav__logo" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="4" y="27" width="9" height="14" rx="2.5" fill="currentColor" opacity="0.55" />
+            <rect x="19.5" y="17" width="9" height="24" rx="2.5" fill="currentColor" opacity="0.78" />
+            <rect x="35" y="7" width="9" height="34" rx="2.5" fill="currentColor" />
+          </svg>
+          Tremplin
+        </Link>
         <div className="site-nav__links">
           <Link to="/" className="site-nav__link">Accueil</Link>
           <Link to="/concours" className="site-nav__link">Le concours</Link>

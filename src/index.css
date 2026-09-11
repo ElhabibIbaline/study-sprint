@@ -75,9 +75,19 @@ button:hover {
 }
 
 .site-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   flex: 0 0 auto;
+  font-size: 1.05rem;
   font-weight: 850;
   letter-spacing: -0.02em;
+}
+
+.site-nav__logo {
+  width: 1.7rem;
+  height: 1.7rem;
+  flex: 0 0 auto;
 }
 
 .site-nav__brand:hover,
@@ -1267,11 +1277,13 @@ button:hover {
 
 .glossary-chip:hover {
   border-color: #aebce0;
+  background-color: white;
 }
 
-.glossary-chip--active {
+.glossary-chip--active,
+.glossary-chip--active:hover {
   border-color: #1d4ed8;
-  background: #1d4ed8;
+  background-color: #1d4ed8;
   color: white;
 }
 
@@ -1326,9 +1338,20 @@ button:hover {
   text-transform: uppercase;
 }
 
-.glossary-card__tag--finances { background: #dcf5ed; color: #087c65; }
-.glossary-card__tag--fonctionPublique { background: #fff0e6; color: #b64b19; }
-.glossary-card__tag--institutions { background: #f1e9ff; color: #6d3fc0; }
+.glossary-card__tag--finances,
+.glossary-card__tag--geometrie,
+.glossary-card__tag--conjugaison { background: #dcf5ed; color: #087c65; }
+
+.glossary-card__tag--fonctionPublique,
+.glossary-card__tag--proportionnalite,
+.glossary-card__tag--homophones { background: #fff0e6; color: #b64b19; }
+
+.glossary-card__tag--institutions,
+.glossary-card__tag--operations,
+.glossary-card__tag--pluriels { background: #f1e9ff; color: #6d3fc0; }
+
+.glossary-card__tag--statistiques,
+.glossary-card__tag--accords { background: #fff7df; color: #92720a; }
 
 .glossary-empty {
   padding: 2rem;
@@ -1345,6 +1368,55 @@ button:hover {
 }
 
 /* Flashcards */
+.flashcard-deck-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.flashcard-deck-tab {
+  padding: 0.7rem 1.1rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 0.8rem;
+  background: white;
+  color: #536078;
+  font-weight: 800;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.flashcard-deck-tab:hover {
+  border-color: #aebce0;
+  background-color: white;
+}
+
+.flashcard-deck-tab--active,
+.flashcard-deck-tab--active:hover {
+  border-color: #1d4ed8;
+  background-color: #122044;
+  color: white;
+}
+
+.flashcard__meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.flashcard__boite {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: #f0f4ff;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .flashcard-progress {
   display: flex;
   align-items: center;
@@ -1380,12 +1452,13 @@ button:hover {
   perspective: 1600px;
 }
 
-.flashcard {
+.flashcard,
+.flashcard:hover {
   width: min(100%, 480px);
   height: 260px;
   padding: 0;
   border: none;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -1457,15 +1530,17 @@ button:hover {
   cursor: pointer;
 }
 
-.flashcard-action--su {
+.flashcard-action--su,
+.flashcard-action--su:hover {
   border-color: #0d9277;
-  background: #eaf8f4;
+  background-color: #eaf8f4;
   color: #087c65;
 }
 
-.flashcard-action--revoir {
+.flashcard-action--revoir,
+.flashcard-action--revoir:hover {
   border-color: #e07b39;
-  background: #fff4eb;
+  background-color: #fff4eb;
   color: #b64b19;
 }
 
