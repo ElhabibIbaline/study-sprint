@@ -7,7 +7,9 @@ function Navbar() {
         <Link to="/" className="site-nav__brand">Objectif DGFiP</Link>
         <div className="site-nav__links">
           <Link to="/" className="site-nav__link">Accueil</Link>
+          <Link to="/concours" className="site-nav__link">Le concours</Link>
           <Link to="/methodologie" className="site-nav__link">Méthodologie</Link>
+          <Link to="/glossaire" className="site-nav__link">Glossaire</Link>
           <Link to="/articles" className="site-nav__link">Articles</Link>
           <Link to="/entrainement" className="site-nav__link">Entraînement</Link>
           <Link to="/annales" className="site-nav__link">Annales</Link>

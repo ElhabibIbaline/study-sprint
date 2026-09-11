@@ -1,5 +1,15 @@
 const liens = [
   {
+    titre: "Inscription aux concours DGFiP",
+    url: "https://concours.dgfip.finances.gouv.fr/",
+    description: "Le portail officiel pour consulter les avis de concours et s'inscrire en ligne.",
+  },
+  {
+    titre: "Rejoindre les finances publiques",
+    url: "https://rejoindrelesfinancespubliques.economie.gouv.fr/",
+    description: "Présentation des métiers, des concours et du calendrier de recrutement de la DGFiP.",
+  },
+  {
     titre: "Site officiel de la fonction publique",
     url: "https://www.fonction-publique.gouv.fr/",
     description: "Informations officielles sur les concours de la fonction publique.",
@@ -18,20 +28,21 @@ const liens = [
 
 function Liens() {
   return (
-    <div>
-      <h1>Liens utiles</h1>
-      <p>Des ressources externes pour compléter ta préparation.</p>
+    <div className="learning-page">
+      <header className="learning-hero learning-hero--compact">
+        <p className="home-eyebrow">Aller plus loin</p>
+        <h1>Liens utiles</h1>
+        <p>Des ressources officielles pour compléter ta préparation et t'inscrire au concours.</p>
+      </header>
 
-      <ul style={{ maxWidth: "500px" }}>
-        {liens.map((lien, index) => (
-          <li key={index} style={{ marginBottom: "1rem" }}>
-            <a href={lien.url} target="_blank" rel="noopener noreferrer">
-              <strong>{lien.titre}</strong>
-            </a>
-            <p style={{ margin: "0.25rem 0 0" }}>{lien.description}</p>
-          </li>
+      <div className="hub-grid">
+        {liens.map((lien) => (
+          <a key={lien.url} href={lien.url} target="_blank" rel="noopener noreferrer" className="hub-card hub-card--external">
+            <strong>{lien.titre}</strong>
+            <p>{lien.description}</p>
+          </a>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

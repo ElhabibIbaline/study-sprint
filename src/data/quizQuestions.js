@@ -3,6 +3,7 @@ export const categoriesInfo = {
   calcul: "Calcul",
   "culture-generale": "Culture générale",
   raisonnement: "Raisonnement logique",
+  vocabulaire: "Vocabulaire administratif",
 };
 
 export const quizQuestions = {
@@ -53,5 +54,17 @@ export const quizQuestions = {
     { question: "Tous les X sont des Y. Aucun Y n'est un Z. Peut-on dire qu'aucun X n'est un Z ?", choix: ["Oui", "Non", "Impossible à dire", "Cela dépend de X"], bonneReponse: 0 },
     { question: "Complétez la suite de lettres : A, C, E, G, ...", choix: ["H", "I", "J", "K"], bonneReponse: 1 },
     { question: "Avec le code 1=A, 2=B, 3=C..., quel mot correspond à 3-1-2 ?", choix: ["CAB", "ABC", "BCA", "BAC"], bonneReponse: 0 },
+  ],
+  vocabulaire: [
+    { question: "Qu'est-ce qu'un « contribuable » ?", choix: ["Un agent de l'administration fiscale", "Une personne qui doit payer un impôt", "Un magistrat de la Cour des comptes", "Un élu local"], bonneReponse: 1 },
+    { question: "Qu'est-ce que la TVA ?", choix: ["Un impôt direct sur le revenu", "Un impôt local sur la propriété", "Un impôt indirect sur la consommation", "Une cotisation sociale"], bonneReponse: 2 },
+    { question: "À quoi sert le « cadastre » ?", choix: ["À recenser les propriétés foncières d'un territoire", "À calculer l'impôt sur le revenu", "À contrôler les comptes de l'État", "À gérer le recrutement des fonctionnaires"], bonneReponse: 0 },
+    { question: "Que fait un « comptable public » ?", choix: ["Il vote le budget de l'État", "Il encaisse les recettes et paie les dépenses publiques", "Il rédige les lois de finances", "Il contrôle les élections"], bonneReponse: 1 },
+    { question: "Que désigne le principe de « séparation ordonnateur / comptable » ?", choix: ["Une même personne ne peut engager la dépense et manier les fonds", "Les impôts directs et indirects sont calculés séparément", "L'État et les collectivités ont des budgets distincts", "Les agents titulaires et contractuels ont des règles différentes"], bonneReponse: 0 },
+    { question: "Qu'est-ce que le « devoir de neutralité » pour un agent public ?", choix: ["Ne jamais prendre de congés", "Ne pas manifester ses opinions politiques ou religieuses dans ses fonctions", "Ne pas parler à ses collègues", "Travailler uniquement à temps partiel"], bonneReponse: 1 },
+    { question: "Que signifie « discrétion professionnelle » ?", choix: ["Travailler discrètement sans être vu", "Ne pas divulguer les informations connues dans l'exercice de ses fonctions", "Refuser toute promotion", "Éviter les réunions de service"], bonneReponse: 1 },
+    { question: "Qu'est-ce que la « décentralisation » ?", choix: ["Le transfert de compétences de l'État vers les collectivités territoriales", "La répartition des services de l'État entre Paris et les préfectures", "La suppression d'un impôt", "Le regroupement de plusieurs ministères"], bonneReponse: 0 },
+    { question: "Quel document récapitule le montant d'impôt dû par un contribuable ?", choix: ["Le cadastre", "L'avis d'imposition", "La loi de finances", "Le budget annexe"], bonneReponse: 1 },
+    { question: "Quel est le rôle de la Cour des comptes ?", choix: ["Voter le budget de l'État", "Recouvrer les impôts", "Contrôler la régularité des comptes publics", "Nommer les fonctionnaires"], bonneReponse: 2 },
   ],
 };

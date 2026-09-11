@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { annales } from "../data/annales";
 import { cours } from "../data/cours";
+import { glossaire } from "../data/glossaire";
 import { quizQuestions } from "../data/quizQuestions";
 
 function Accueil() {
@@ -35,6 +36,7 @@ function Accueil() {
             <div><dt>{nombreQuiz}</dt><dd>questions de quiz</dd></div>
             <div><dt>{Object.keys(cours).length}</dt><dd>cours ciblés</dd></div>
             <div><dt>{nombreQuestionsAnnales}</dt><dd>questions d’annales</dd></div>
+            <div><dt>{glossaire.length}</dt><dd>mots de glossaire</dd></div>
           </dl>
         </div>
 
@@ -78,6 +80,16 @@ function Accueil() {
           <Link className="resource-card resource-card--exam" to="/annales">
             <span className="resource-card__number">03</span>
             <div><h3>Me mettre en condition</h3><p>Des sujets d’annales pour mesurer votre niveau réel.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
+          <Link className="resource-card" to="/concours">
+            <span className="resource-card__number">04</span>
+            <div><h3>Connaître le concours</h3><p>Épreuves, coefficients, conditions et calendrier de la session.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
+          <Link className="resource-card resource-card--course" to="/glossaire">
+            <span className="resource-card__number">05</span>
+            <div><h3>Apprendre le vocabulaire</h3><p>{glossaire.length} termes de fiscalité et d’administration expliqués.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
         </div>

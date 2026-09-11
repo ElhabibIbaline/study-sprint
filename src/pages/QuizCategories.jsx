@@ -3,27 +3,18 @@ import { categoriesInfo, quizQuestions } from "../data/quizQuestions";
 
 function QuizCategories() {
   return (
-    <div>
-      <h1>Quiz / QCM</h1>
-      <p>Choisis une catégorie pour t'entraîner.</p>
+    <div className="learning-page">
+      <header className="learning-hero learning-hero--compact">
+        <p className="home-eyebrow">Tester mes connaissances</p>
+        <h1>Quiz / QCM</h1>
+        <p>Choisis une catégorie pour t'entraîner, avec un résultat immédiat à chaque question.</p>
+      </header>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "400px" }}>
+      <div className="hub-grid">
         {Object.keys(categoriesInfo).map((cle) => (
-          <Link
-            key={cle}
-            to={`/quiz/${cle}`}
-            style={{
-              display: "block",
-              padding: "1rem",
-              border: "1px solid #ccc",
-              borderRadius: "8px",
-              backgroundColor: "white",
-            }}
-          >
-            <strong>{categoriesInfo[cle]}</strong>
-            <p style={{ margin: "0.25rem 0 0", color: "#555" }}>
-              {quizQuestions[cle].length} questions
-            </p>
+          <Link key={cle} to={`/quiz/${cle}`} className="hub-card">
+            <div><strong>{categoriesInfo[cle]}</strong><p>{quizQuestions[cle].length} questions</p></div>
+            <span className="hub-card__arrow" aria-hidden="true">→</span>
           </Link>
         ))}
       </div>

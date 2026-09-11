@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Accueil from "./pages/Accueil";
+import Concours from "./pages/Concours";
+import Glossaire from "./pages/Glossaire";
 import Methodologie from "./pages/Methodologie";
 import MethodeCasPratique from "./pages/MethodeCasPratique";
 import MethodeQcm from "./pages/MethodeQcm";
@@ -21,6 +23,8 @@ function App() {
       <main className="app-main">
         <Routes>
           <Route path="/" element={<Accueil />} />
+          <Route path="/concours" element={<Concours />} />
+          <Route path="/glossaire" element={<Glossaire />} />
           <Route path="/quiz" element={<QuizCategories />} />
           <Route path="/quiz/:categorie" element={<Quiz />} />
           <Route path="/methodologie" element={<Methodologie />} />

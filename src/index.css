@@ -335,7 +335,7 @@ button:hover {
 
 .resource-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1rem;
 }
 
@@ -502,7 +502,7 @@ button:hover {
 
   .home-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
   }
 
@@ -1167,6 +1167,176 @@ button:hover {
 
   .timeline small {
     grid-column: 2;
+  }
+}
+
+/* Pages de listes (Entraînement, Quiz, Annales, Liens) */
+.hub-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.hub-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 1rem;
+  background: white;
+  color: #172033;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.hub-card:hover {
+  border-color: #aebce0;
+  box-shadow: 0 18px 35px rgba(37, 62, 116, 0.1);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.hub-card strong {
+  display: block;
+  color: #122044;
+  font-size: 1.08rem;
+}
+
+.hub-card p {
+  margin: 0.3rem 0 0;
+  color: #69758b;
+  font-size: 0.9rem;
+}
+
+.hub-card__arrow {
+  flex: 0 0 auto;
+  color: #1d4ed8;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.hub-card--external {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Glossaire */
+.glossary-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.glossary-search {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.8rem 1rem;
+  border: 1px solid #cad2e1;
+  border-radius: 0.7rem;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.glossary-search:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 1px;
+}
+
+.glossary-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.glossary-chip {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 999px;
+  background: white;
+  color: #536078;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.glossary-chip:hover {
+  border-color: #aebce0;
+}
+
+.glossary-chip--active {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  color: white;
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.glossary-card {
+  padding: 0;
+  border: 1px solid #dfe4ec;
+  border-radius: 0.9rem;
+  background: white;
+  overflow: hidden;
+}
+
+.glossary-card summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.1rem 1.3rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.glossary-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.glossary-card summary strong {
+  color: #122044;
+  font-size: 1.02rem;
+}
+
+.glossary-card p {
+  margin: 0;
+  padding: 0 1.3rem 1.2rem;
+  color: #58657a;
+  line-height: 1.6;
+}
+
+.glossary-card__tag {
+  align-self: flex-start;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: #e8efff;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.glossary-card__tag--finances { background: #dcf5ed; color: #087c65; }
+.glossary-card__tag--fonctionPublique { background: #fff0e6; color: #b64b19; }
+.glossary-card__tag--institutions { background: #f1e9ff; color: #6d3fc0; }
+
+.glossary-empty {
+  padding: 2rem;
+  border: 1px dashed #cad2e1;
+  border-radius: 1rem;
+  color: #69758b;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .glossary-grid {
+    grid-template-columns: 1fr;
   }
 }
 
