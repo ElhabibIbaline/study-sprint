@@ -92,6 +92,11 @@ function Accueil() {
             <div><h3>Apprendre le vocabulaire</h3><p>{glossaire.length} termes de fiscalité et d’administration expliqués.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
+          <Link className="resource-card" to="/flashcards">
+            <span className="resource-card__number">06</span>
+            <div><h3>Mémoriser par répétition</h3><p>Des flashcards pour ancrer durablement le vocabulaire du concours.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

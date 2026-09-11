@@ -80,11 +80,16 @@ function Glossaire() {
       <section className="article-cta">
         <div>
           <p className="home-eyebrow">Mémoriser le vocabulaire</p>
-          <h2>Teste-toi sur ces définitions en conditions de quiz.</h2>
+          <h2>Réviser en flashcards ou se tester en quiz.</h2>
         </div>
-        <Link className="home-button home-button--primary" to="/quiz/vocabulaire">
-          Faire le quiz vocabulaire
-        </Link>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <Link className="home-button home-button--light" to="/flashcards">
+            Réviser en flashcards
+          </Link>
+          <Link className="home-button home-button--primary" to="/quiz/vocabulaire">
+            Faire le quiz vocabulaire
+          </Link>
+        </div>
       </section>
     </div>
   );

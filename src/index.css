@@ -87,11 +87,15 @@ button:hover {
 
 .site-nav__links {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.2rem;
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .site-nav__link {
+  flex: 0 0 auto;
   padding: 0.65rem 0.7rem;
   border-radius: 0.5rem;
   font-size: 0.9rem;
@@ -1337,6 +1341,160 @@ button:hover {
 @media (max-width: 700px) {
   .glossary-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Flashcards */
+.flashcard-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.flashcard-progress__bar {
+  flex: 1;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #e4e8ee;
+  overflow: hidden;
+}
+
+.flashcard-progress__bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #1d4ed8, #38bdf8);
+  transition: width 250ms ease;
+}
+
+.flashcard-progress span {
+  flex: 0 0 auto;
+  color: #536078;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.flashcard-stage {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 1.5rem;
+  perspective: 1600px;
+}
+
+.flashcard {
+  width: min(100%, 480px);
+  height: 260px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.flashcard__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 400ms ease;
+  transform-style: preserve-3d;
+}
+
+.flashcard--retournee .flashcard__inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  border: 1px solid #d9e2f8;
+  border-radius: 1.25rem;
+  background: white;
+  box-shadow: 0 18px 40px rgba(37, 62, 116, 0.1);
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.flashcard__face--recto strong {
+  color: #122044;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.flashcard__face--recto small {
+  color: #90a0bd;
+  font-size: 0.8rem;
+}
+
+.flashcard__face--verso {
+  transform: rotateY(180deg);
+  background: #122044;
+}
+
+.flashcard__face--verso p {
+  margin: 0;
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.flashcard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.flashcard-action {
+  padding: 0.75rem 1.4rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 0.75rem;
+  background: white;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.flashcard-action--su {
+  border-color: #0d9277;
+  background: #eaf8f4;
+  color: #087c65;
+}
+
+.flashcard-action--revoir {
+  border-color: #e07b39;
+  background: #fff4eb;
+  color: #b64b19;
+}
+
+.flashcard-remaining {
+  color: #90a0bd;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.flashcard-done {
+  padding: 3rem 2rem;
+  border: 1px dashed #cad2e1;
+  border-radius: 1.25rem;
+  text-align: center;
+}
+
+.flashcard-done h2 {
+  margin: 0 0 0.5rem;
+  color: #122044;
+}
+
+.flashcard-done p {
+  margin: 0 0 1.5rem;
+  color: #69758b;
+}
+
+@media (max-width: 550px) {
+  .flashcard {
+    height: 300px;
   }
 }
 
