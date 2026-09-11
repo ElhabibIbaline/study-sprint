@@ -55,8 +55,12 @@ button:hover {
 }
 
 .site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: #1d4ed8;
   color: white;
+  box-shadow: 0 4px 16px rgba(8, 20, 55, 0.18);
 }
 
 .site-nav__inner {
@@ -114,6 +118,12 @@ button:hover {
 
 .site-nav__link:hover {
   background: rgba(255, 255, 255, 0.12);
+}
+
+.site-nav__link--active,
+.site-nav__link--active:hover {
+  background: white;
+  color: #1d4ed8;
 }
 
 .home-page {
@@ -744,9 +754,9 @@ button:hover {
 
 .method-toc {
   position: sticky;
-  top: 1rem;
+  top: calc(4.25rem + 1rem);
   display: grid;
-  max-height: calc(100vh - 2rem);
+  max-height: calc(100vh - 4.25rem - 2rem);
   gap: 0.2rem;
   padding: 1.1rem;
   overflow-y: auto;
@@ -784,7 +794,7 @@ button:hover {
 }
 
 .lesson-section {
-  scroll-margin-top: 1rem;
+  scroll-margin-top: calc(4.25rem + 1rem);
   margin-bottom: 1.25rem;
   padding: clamp(1.5rem, 4vw, 2.5rem);
   border: 1px solid #dfe4ec;

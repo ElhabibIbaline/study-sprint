@@ -1,4 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
+function classeLien({ isActive }) {
+  return `site-nav__link${isActive ? " site-nav__link--active" : ""}`;
+}
 
 function Navbar() {
   return (
@@ -13,16 +17,16 @@ function Navbar() {
           Tremplin
         </Link>
         <div className="site-nav__links">
-          <Link to="/" className="site-nav__link">Accueil</Link>
-          <Link to="/concours" className="site-nav__link">Le concours</Link>
-          <Link to="/methodologie" className="site-nav__link">Méthodologie</Link>
-          <Link to="/glossaire" className="site-nav__link">Glossaire</Link>
-          <Link to="/flashcards" className="site-nav__link">Flashcards</Link>
-          <Link to="/articles" className="site-nav__link">Articles</Link>
-          <Link to="/entrainement" className="site-nav__link">Entraînement</Link>
-          <Link to="/annales" className="site-nav__link">Annales</Link>
-          <Link to="/quiz" className="site-nav__link">Quiz</Link>
-          <Link to="/liens" className="site-nav__link">Liens utiles</Link>
+          <NavLink to="/" end className={classeLien}>Accueil</NavLink>
+          <NavLink to="/concours" className={classeLien}>Le concours</NavLink>
+          <NavLink to="/methodologie" className={classeLien}>Méthodologie</NavLink>
+          <NavLink to="/glossaire" className={classeLien}>Glossaire</NavLink>
+          <NavLink to="/flashcards" className={classeLien}>Flashcards</NavLink>
+          <NavLink to="/articles" className={classeLien}>Articles</NavLink>
+          <NavLink to="/entrainement" className={classeLien}>Entraînement</NavLink>
+          <NavLink to="/annales" className={classeLien}>Annales</NavLink>
+          <NavLink to="/quiz" className={classeLien}>Quiz</NavLink>
+          <NavLink to="/liens" className={classeLien}>Liens utiles</NavLink>
         </div>
       </div>
     </nav>
