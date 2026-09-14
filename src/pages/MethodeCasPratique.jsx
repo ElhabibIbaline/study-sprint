@@ -105,6 +105,7 @@ function MethodeCasPratique() {
             <span className="lesson-number">13</span><h2>La grille de contrôle finale</h2>
             <div className="final-checks"><div><strong>Consignes</strong><label><input type="checkbox" /> Toutes les questions sont traitées.</label><label><input type="checkbox" /> Format, destinataire et longueur sont respectés.</label></div><div><strong>Contenu</strong><label><input type="checkbox" /> Les idées viennent du dossier.</label><label><input type="checkbox" /> Les chiffres sont exacts et croisés.</label></div><div><strong>Structure</strong><label><input type="checkbox" /> Le plan est visible et équilibré.</label><label><input type="checkbox" /> Chaque paragraphe porte une idée.</label></div><div><strong>Langue et copie</strong><label><input type="checkbox" /> Verbes, accords et pluriels sont vérifiés.</label><label><input type="checkbox" /> La copie est lisible et anonyme.</label></div></div>
             <div className="method-mantra">Commande <span>→</span> tri <span>→</span> plan <span>→</span> rédaction <span>→</span> relecture</div>
+            <Link className="home-button home-button--primary lesson-action" to="/cas-pratique">S'entraîner sur un cas pratique complet</Link>
           </section>
 
           <p className="official-note">Méthode alignée sur le format 2026. <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032409140/2026-05-23" target="_blank" rel="noreferrer">Consulter le texte officiel</a>.</p>

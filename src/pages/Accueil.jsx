@@ -97,6 +97,11 @@ function Accueil() {
             <div><h3>Mémoriser par répétition</h3><p>Des flashcards pour ancrer durablement le vocabulaire du concours.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
+          <Link className="resource-card resource-card--exam" to="/cas-pratique">
+            <span className="resource-card__number">07</span>
+            <div><h3>S'entraîner sur un cas pratique</h3><p>Un dossier complet, des questions et des corrigés indicatifs.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

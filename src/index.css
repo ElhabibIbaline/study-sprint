@@ -1194,6 +1194,58 @@ button:hover {
   }
 }
 
+/* Cas pratique */
+.reponse-brouillon {
+  width: 100%;
+  margin-top: 1.1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 0.8rem;
+  background: #fbfcfe;
+  color: #172033;
+  font-family: inherit;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.reponse-brouillon:focus {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 1px;
+}
+
+.corrige-toggle {
+  margin-top: 1rem;
+  border: 1px dashed #b9c3da;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.corrige-toggle summary {
+  padding: 0.85rem 1.1rem;
+  color: #1d4ed8;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.corrige-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.corrige-toggle[open] summary {
+  border-bottom: 1px solid #e4e8ee;
+}
+
+.corrige-toggle__body {
+  padding: 1rem 1.1rem 1.3rem;
+  background: #f6f8fb;
+  color: #3d4a63;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
 /* Pages de listes (Entraînement, Quiz, Annales, Liens) */
 .hub-grid {
   display: grid;
