@@ -1931,6 +1931,72 @@ button:hover {
   }
 }
 
+/* Astuces & règles */
+.astuce-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.astuce-card {
+  border: 1px solid #dfe4ec;
+  border-radius: 1rem;
+  background: white;
+  overflow: hidden;
+}
+
+.astuce-card summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 1.1rem 3rem 1.1rem 1.4rem;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.astuce-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.astuce-card summary::after {
+  position: absolute;
+  top: 50%;
+  right: 1.4rem;
+  color: #1d4ed8;
+  content: "+";
+  font-size: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.astuce-card[open] summary::after {
+  content: "−";
+}
+
+.astuce-card summary strong {
+  color: #122044;
+  font-size: 1.05rem;
+}
+
+.astuce-card summary small {
+  color: #90a0bd;
+  font-size: 0.78rem;
+}
+
+.astuce-card__body {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0 1.4rem 1.4rem;
+  border-top: 1px solid #edf0f4;
+  padding-top: 1.1rem;
+}
+
+.astuce-card__body .method-rule,
+.astuce-card__body .method-warning,
+.astuce-card__body .example-box {
+  margin-top: 0;
+}
+
 @media (max-width: 650px) {
   .method-choice-grid,
   .time-grid,

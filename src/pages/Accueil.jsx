@@ -119,6 +119,11 @@ function Accueil() {
             <div><h3>Tester ma rapidité</h3><p>Un sprint chrono, toutes catégories mélangées, score à battre.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
+          <Link className="resource-card" to="/astuces">
+            <span className="resource-card__number">10</span>
+            <div><h3>Repérer les pièges récurrents</h3><p>Règle, exception et exemple pour les questions qui reviennent chaque session.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

@@ -21,6 +21,7 @@ function Navbar() {
           <NavLink to="/concours" className={classeLien}>Le concours</NavLink>
           <NavLink to="/methodologie" className={classeLien}>Méthodologie</NavLink>
           <NavLink to="/cas-pratique" className={classeLien}>Cas pratique</NavLink>
+          <NavLink to="/astuces" className={classeLien}>Astuces & règles</NavLink>
           <NavLink to="/glossaire" className={classeLien}>Glossaire</NavLink>
           <NavLink to="/flashcards" className={classeLien}>Flashcards</NavLink>
           <NavLink to="/jeu-association" className={classeLien}>Jeu</NavLink>

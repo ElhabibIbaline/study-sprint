@@ -24,7 +24,10 @@ function QuizCategories() {
           <p className="home-eyebrow">Envie de rapidité ?</p>
           <h2>Essaie le sprint chrono, toutes catégories mélangées.</h2>
         </div>
-        <Link className="home-button home-button--primary" to="/sprint">Faire un sprint chrono</Link>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <Link className="home-button home-button--light" to="/astuces">Voir les astuces</Link>
+          <Link className="home-button home-button--primary" to="/sprint">Faire un sprint chrono</Link>
+        </div>
       </section>
     </div>
   );
