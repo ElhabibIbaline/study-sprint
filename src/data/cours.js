@@ -62,4 +62,46 @@ export const cours = {
       { question: "« La lettre qu'il a … est arrivée » (écrire)", choix: ["écrit", "écrits", "écrite", "écrites"], bonneReponse: 2, explication: "COD 'que' = la lettre (fém sing), placé avant le verbe → accord : « écrite »." },
     ],
   },
+
+  "raisonnement-logique": {
+    titre: "Raisonnement logique : suites, déductions et analogies",
+    explication: [
+      "Une suite numérique ou alphabétique suit une règle fixe : addition, multiplication, alternance de deux règles, ou différences qui augmentent régulièrement. Repérez d'abord la relation entre deux termes consécutifs, puis vérifiez qu'elle fonctionne sur toute la suite.",
+      "Un syllogisme relie deux affirmations pour en tirer une conclusion. Cette conclusion n'est valide que si elle découle strictement des deux affirmations, sans ajouter d'hypothèse supplémentaire.",
+      "Piège fréquent, la fausse réciproque : « tous les A sont B » ne permet jamais de conclure que « tout B est un A ». Une condition nécessaire n'est pas forcément suffisante.",
+      "Une analogie (A est à B ce que C est à D) repose sur une relation logique précise entre les deux premiers termes, qu'il faut retrouver à l'identique entre les deux derniers.",
+    ],
+    exemples: [
+      { enonce: "Complétez : 5, 10, 20, 40, ...", solution: "Chaque terme est multiplié par 2. Le suivant est 40 × 2 = 80." },
+      { enonce: "Tous les agents de catégorie C ont réussi un concours. Léa a réussi un concours. Est-elle forcément agent de catégorie C ?", solution: "Non : réussir un concours est une condition nécessaire mais pas suffisante pour être agent de catégorie C, puisque d'autres concours existent. C'est une fausse réciproque." },
+      { enonce: "Marteau est à Clou ce que Tournevis est à :", solution: "Vis. La relation est « l'outil sert à enfoncer ou serrer cet objet »." },
+    ],
+    exercices: [
+      { question: "Complétez la suite : 3, 9, 27, 81, ...", choix: ["162", "243", "324", "405"], bonneReponse: 1, explication: "Chaque terme est multiplié par 3 : 81 × 3 = 243." },
+      { question: "Complétez la suite : 2, 3, 5, 8, 12, ...", choix: ["16", "17", "18", "20"], bonneReponse: 1, explication: "Les différences augmentent de 1 à chaque fois (+1, +2, +3, +4), donc +5 : 12 + 5 = 17." },
+      { question: "Tous les fonctionnaires titulaires ont un numéro de matricule. Karim a un numéro de matricule. Peut-on affirmer que Karim est titulaire ?", choix: ["Oui, c'est certain", "Non, ce n'est pas garanti", "Impossible à dire du tout", "Cela dépend de son grade"], bonneReponse: 1, explication: "Avoir un matricule est nécessaire mais pas suffisant pour être titulaire : d'autres agents (stagiaires, contractuels) peuvent aussi en avoir un. Fausse réciproque." },
+      { question: "Clé est à Serrure ce que Code est à :", choix: ["Cadenas", "Digicode", "Porte", "Sécurité"], bonneReponse: 1, explication: "La relation est « ce qui permet d'ouvrir ce dispositif » : une clé ouvre une serrure, un code ouvre un digicode." },
+    ],
+  },
+
+  "institutions-culture-generale": {
+    titre: "Institutions françaises et organisation administrative",
+    explication: [
+      "La France est une République dont les pouvoirs sont séparés : le pouvoir exécutif (président de la République et gouvernement), le pouvoir législatif (le Parlement, composé de l'Assemblée nationale et du Sénat) et le pouvoir judiciaire (les tribunaux, indépendants).",
+      "Le territoire est organisé en collectivités territoriales : la commune, le département et la région, chacune dotée d'un exécutif élu et de compétences propres, exercées de façon autonome.",
+      "L'État agit aussi localement par l'intermédiaire de services déconcentrés (préfectures, DDFiP...), qui appliquent les décisions nationales sans être des collectivités autonomes : c'est la déconcentration, à ne pas confondre avec la décentralisation.",
+      "La hiérarchie des normes organise les textes juridiques du plus important au moins important : la Constitution, puis les lois, puis les décrets, puis les arrêtés et circulaires.",
+    ],
+    exemples: [
+      { enonce: "Qui exerce le pouvoir législatif en France ?", solution: "Le Parlement, composé de l'Assemblée nationale et du Sénat." },
+      { enonce: "Quelle est la différence entre décentralisation et déconcentration ?", solution: "La décentralisation transfère des compétences à des collectivités autonomes (une région, par exemple). La déconcentration répartit les moyens de l'État lui-même entre son administration centrale et ses services locaux (une préfecture, par exemple)." },
+      { enonce: "Un décret peut-il contredire une loi ?", solution: "Non : dans la hiérarchie des normes, le décret est subordonné à la loi et ne peut ni la modifier ni la contredire." },
+    ],
+    exercices: [
+      { question: "Quelles sont les trois collectivités territoriales de base qui structurent le territoire français ?", choix: ["Commune, département, région", "Commune, canton, arrondissement", "Préfecture, département, région", "Mairie, préfecture, ministère"], bonneReponse: 0, explication: "Commune, département et région sont les trois niveaux de collectivités territoriales dotées d'une autonomie de décision." },
+      { question: "Qui est à la tête du pouvoir exécutif en France ?", choix: ["Le président de l'Assemblée nationale", "Le président de la République et le gouvernement", "Le président du Conseil constitutionnel", "Le procureur de la République"], bonneReponse: 1, explication: "Le pouvoir exécutif est exercé par le président de la République et le gouvernement, dirigé par le Premier ministre." },
+      { question: "Quel texte est immédiatement supérieur à un décret dans la hiérarchie des normes ?", choix: ["Une circulaire", "Un arrêté", "La loi", "Un règlement intérieur"], bonneReponse: 2, explication: "La hiérarchie place la loi au-dessus du décret, lui-même au-dessus des arrêtés et circulaires." },
+      { question: "Une préfecture est :", choix: ["Une collectivité territoriale autonome", "Un service déconcentré de l'État", "Un organe du pouvoir judiciaire", "Une chambre du Parlement"], bonneReponse: 1, explication: "La préfecture représente l'État au niveau local : c'est un service déconcentré, pas une collectivité territoriale autonome." },
+    ],
+  },
 };
