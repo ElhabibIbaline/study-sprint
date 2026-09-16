@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { categoriesGlossaire, glossaire } from "../data/glossaire";
 import { paquetsRegles } from "../data/flashcardsRegles";
+import { enregistrerFlashcardRevue, enregistrerPaquetMaitrise } from "../utils/progression";
 
 const CLE_STOCKAGE = "flashcards-srs-v1";
 const INTERVALLES_JOURS = [0, 1, 3, 7, 16];
@@ -128,6 +129,11 @@ function Flashcards() {
     setSrs(nouveauSrs);
     sauvegarderSrs(nouveauSrs);
     setRetournee(false);
+    enregistrerFlashcardRevue();
+    const toutMaitrise = config.data.every(
+      (c) => metaCarte(nouveauSrs, idCarte(paquet, c.terme)).boite >= INTERVALLES_JOURS.length - 1,
+    );
+    if (toutMaitrise) enregistrerPaquetMaitrise(paquet);
     if (acquise) {
       setFile((f) => f.slice(1));
     } else {

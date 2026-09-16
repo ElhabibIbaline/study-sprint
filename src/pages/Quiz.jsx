@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { categoriesInfo, quizQuestions } from "../data/quizQuestions";
+import { enregistrerQuizTermine } from "../utils/progression";
 
 function Quiz() {
   const { categorie } = useParams();
@@ -34,6 +35,7 @@ function Quiz() {
       setReponseChoisie(null);
     } else {
       setQuizTermine(true);
+      enregistrerQuizTermine(score === questions.length);
     }
   }
 

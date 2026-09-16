@@ -3,6 +3,7 @@ import { annales } from "../data/annales";
 import { cours } from "../data/cours";
 import { glossaire } from "../data/glossaire";
 import { quizQuestions } from "../data/quizQuestions";
+import { calculerSerie, chargerProgression } from "../utils/progression";
 
 function Accueil() {
   const nombreQuiz = Object.values(quizQuestions).reduce(
@@ -13,6 +14,7 @@ function Accueil() {
     (total, annale) => total + annale.questions.length,
     0,
   );
+  const serie = calculerSerie(chargerProgression());
 
   return (
     <div className="home-page">
@@ -44,6 +46,11 @@ function Accueil() {
           <div className="session-card__topline">
             <span className="session-card__badge">20 min</span>
             <span>Session express</span>
+            {serie > 0 && (
+              <Link to="/progression" className="session-card__streak">
+                🔥 {serie} {serie > 1 ? "jours" : "jour"}
+              </Link>
+            )}
           </div>
           <h2 id="session-title">Votre séance du jour</h2>
           <ol className="session-steps">

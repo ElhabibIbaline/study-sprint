@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { annales } from "../data/annales";
+import { enregistrerAnnaleTerminee } from "../utils/progression";
 
 function AnnaleDetail() {
   const { annee } = useParams();
@@ -29,6 +30,7 @@ function AnnaleDetail() {
 
   function valider() {
     setValide(true);
+    enregistrerAnnaleTerminee(annee);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 

@@ -265,6 +265,20 @@ button:hover {
   color: #1d4ed8;
 }
 
+.session-card__streak {
+  margin-left: auto;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: #fff4e0;
+  color: #b3730a;
+  font-weight: 800;
+}
+
+.session-card__streak:hover {
+  text-decoration: none;
+  background: #ffe8c2;
+}
+
 .session-card h2 {
   margin: 1.1rem 0 1.35rem;
   color: #122044;
@@ -1633,6 +1647,123 @@ button:hover {
   .flashcard {
     height: 300px;
   }
+}
+
+/* Progression : séries et badges */
+.streak-banner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(120deg, #122044, #1d4ed8);
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.streak-banner__flame {
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.streak-banner div {
+  display: flex;
+  flex-direction: column;
+}
+
+.streak-banner strong {
+  font-size: 2.25rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.streak-banner span {
+  color: #c7d1e8;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.8rem;
+}
+
+.stat-tile {
+  padding: 1.1rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 0.9rem;
+  background: white;
+  text-align: center;
+}
+
+.stat-tile dt {
+  margin: 0;
+  color: #122044;
+  font-size: 1.4rem;
+  font-weight: 850;
+}
+
+.stat-tile dd {
+  margin: 0.3rem 0 0;
+  color: #69758b;
+  font-size: 0.78rem;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.badge-card {
+  padding: 1.3rem;
+  border: 1px solid #f0dfa0;
+  border-radius: 1rem;
+  background: #fffdf5;
+  box-shadow: 0 10px 25px rgba(180, 140, 0, 0.08);
+}
+
+.badge-card__icon {
+  font-size: 1.6rem;
+}
+
+.badge-card strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #122044;
+}
+
+.badge-card p {
+  margin: 0.3rem 0 0;
+  color: #69758b;
+  font-size: 0.85rem;
+}
+
+.badge-card--verrouille {
+  border-color: #dfe4ec;
+  background: #f6f8fb;
+  box-shadow: none;
+  opacity: 0.75;
+}
+
+.badge-card--verrouille strong {
+  color: #8994a8;
+}
+
+.progression-reset {
+  margin-top: 2.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #e0a5a5;
+  border-radius: 0.6rem;
+  background: white;
+  color: #b3312c;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.progression-reset:hover {
+  background: #fff0ef;
 }
 
 @media (max-width: 650px) {

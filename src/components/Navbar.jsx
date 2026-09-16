@@ -23,6 +23,7 @@ function Navbar() {
           <NavLink to="/cas-pratique" className={classeLien}>Cas pratique</NavLink>
           <NavLink to="/glossaire" className={classeLien}>Glossaire</NavLink>
           <NavLink to="/flashcards" className={classeLien}>Flashcards</NavLink>
+          <NavLink to="/progression" className={classeLien}>Progression</NavLink>
           <NavLink to="/articles" className={classeLien}>Articles</NavLink>
           <NavLink to="/entrainement" className={classeLien}>Entraînement</NavLink>
           <NavLink to="/annales" className={classeLien}>Annales</NavLink>

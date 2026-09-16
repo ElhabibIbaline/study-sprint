@@ -7,6 +7,7 @@ import Concours from "./pages/Concours";
 import Flashcards from "./pages/Flashcards";
 import Glossaire from "./pages/Glossaire";
 import Methodologie from "./pages/Methodologie";
+import Progression from "./pages/Progression";
 import MethodeCasPratique from "./pages/MethodeCasPratique";
 import MethodeQcm from "./pages/MethodeQcm";
 import Quiz from "./pages/Quiz";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/concours" element={<Concours />} />
           <Route path="/glossaire" element={<Glossaire />} />
           <Route path="/flashcards" element={<Flashcards />} />
+          <Route path="/progression" element={<Progression />} />
           <Route path="/quiz" element={<QuizCategories />} />
           <Route path="/quiz/:categorie" element={<Quiz />} />
           <Route path="/methodologie" element={<Methodologie />} />
