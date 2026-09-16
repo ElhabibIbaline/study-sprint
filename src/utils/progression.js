@@ -10,6 +10,8 @@ function etatParDefaut() {
     annalesTerminees: [],
     jeuxTermines: 0,
     jeuxParfaits: 0,
+    sprintsTermines: 0,
+    meilleurScoreSprint: 0,
   };
 }
 
@@ -75,6 +77,17 @@ export function enregistrerJeuTermine(sansErreur) {
   return sauvegarder(etat);
 }
 
+export function enregistrerSprintTermine(score) {
+  let etat = chargerProgression();
+  etat = marquerJourActif(etat);
+  etat = {
+    ...etat,
+    sprintsTermines: etat.sprintsTermines + 1,
+    meilleurScoreSprint: Math.max(etat.meilleurScoreSprint, score),
+  };
+  return sauvegarder(etat);
+}
+
 export function enregistrerPaquetMaitrise(paquet) {
   let etat = chargerProgression();
   if (etat.paquetsMaitrises.includes(paquet)) return etat;
@@ -120,6 +133,9 @@ export const BADGES = [
   { id: "toutes-annales", titre: "Toutes les annales", description: "Termine les cinq annales disponibles.", condition: (e) => e.annalesTerminees.length >= 5 },
   { id: "premier-jeu", titre: "Premier jeu", description: "Termine une première partie du jeu d'association.", condition: (e) => e.jeuxTermines >= 1 },
   { id: "jeu-parfait", titre: "Sans une erreur", description: "Termine une partie du jeu d'association sans aucune erreur.", condition: (e) => e.jeuxParfaits >= 1 },
+  { id: "premier-sprint", titre: "Premier sprint", description: "Termine une première session de sprint chrono.", condition: (e) => e.sprintsTermines >= 1 },
+  { id: "sprint-dix", titre: "Dix en un sprint", description: "Réponds correctement à dix questions en un seul sprint.", condition: (e) => e.meilleurScoreSprint >= 10 },
+  { id: "sprint-vingt", titre: "Vingt en un sprint", description: "Réponds correctement à vingt questions en un seul sprint.", condition: (e) => e.meilleurScoreSprint >= 20 },
 ];
 
 export function badgesDebloques(etat) {

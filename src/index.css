@@ -1867,6 +1867,70 @@ button:hover {
   }
 }
 
+/* Sprint chrono */
+.jeu-barre--urgence {
+  background: #7a1f1f;
+  animation: sprint-pulse 1s ease-in-out infinite;
+}
+
+@keyframes sprint-pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(220, 60, 60, 0); }
+  50% { box-shadow: 0 0 0 6px rgba(220, 60, 60, 0.15); }
+}
+
+.sprint-question {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dfe4ec;
+  border-radius: 1.25rem;
+  background: white;
+}
+
+.sprint-question h2 {
+  margin: 0.75rem 0 1.5rem;
+  color: #122044;
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+}
+
+.sprint-choix,
+.sprint-choix:hover {
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #dfe4ec;
+  border-radius: 0.8rem;
+  background: white;
+  color: #172033;
+  text-align: left;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.sprint-choix:hover:not(:disabled) {
+  border-color: #aebce0;
+  transform: translateX(2px);
+}
+
+.sprint-choix--correct,
+.sprint-choix--correct:hover {
+  border-color: #0d9277;
+  background: #dcf5ed;
+  color: #087c65;
+  font-weight: 700;
+}
+
+.sprint-choix--faux,
+.sprint-choix--faux:hover {
+  border-color: #d1453b;
+  background: #ffe3e0;
+  color: #a12e26;
+  font-weight: 700;
+}
+
+@media (max-width: 550px) {
+  .sprint-question h2 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 650px) {
   .method-choice-grid,
   .time-grid,

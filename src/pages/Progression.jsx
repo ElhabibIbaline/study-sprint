@@ -40,6 +40,8 @@ function Progression() {
         <div className="stat-tile"><dt>{etat.annalesTerminees.length} / 5</dt><dd>annales terminées</dd></div>
         <div className="stat-tile"><dt>{etat.flashcardsRevues}</dt><dd>flashcards révisées</dd></div>
         <div className="stat-tile"><dt>{etat.paquetsMaitrises.length} / 3</dt><dd>paquets maîtrisés</dd></div>
+        <div className="stat-tile"><dt>{etat.sprintsTermines}</dt><dd>sprints joués</dd></div>
+        <div className="stat-tile"><dt>{etat.meilleurScoreSprint}</dt><dd>meilleur score sprint</dd></div>
       </div>
 
       <h2 style={{ marginTop: "2.5rem" }}>Badges ({BADGES.filter((b) => b.condition(etat)).length} / {BADGES.length})</h2>
@@ -62,7 +64,8 @@ function Progression() {
           <h2>Fais un quiz ou révise tes flashcards aujourd'hui.</h2>
         </div>
         <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-          <Link className="home-button home-button--primary" to="/quiz">Faire un quiz</Link>
+          <Link className="home-button home-button--primary" to="/sprint">Faire un sprint chrono</Link>
+          <Link className="home-button home-button--light" to="/quiz">Faire un quiz</Link>
           <Link className="home-button home-button--light" to="/flashcards">Réviser des flashcards</Link>
         </div>
       </section>

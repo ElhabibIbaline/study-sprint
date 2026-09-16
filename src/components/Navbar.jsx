@@ -29,6 +29,7 @@ function Navbar() {
           <NavLink to="/entrainement" className={classeLien}>Entraînement</NavLink>
           <NavLink to="/annales" className={classeLien}>Annales</NavLink>
           <NavLink to="/quiz" className={classeLien}>Quiz</NavLink>
+          <NavLink to="/sprint" className={classeLien}>Sprint chrono</NavLink>
           <NavLink to="/liens" className={classeLien}>Liens utiles</NavLink>
         </div>
       </div>

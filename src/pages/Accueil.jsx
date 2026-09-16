@@ -114,6 +114,11 @@ function Accueil() {
             <div><h3>Jouer pour retenir plus vite</h3><p>Un jeu d'association chronométré, seul contre le chrono.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
+          <Link className="resource-card" to="/sprint">
+            <span className="resource-card__number">09</span>
+            <div><h3>Tester ma rapidité</h3><p>Un sprint chrono, toutes catégories mélangées, score à battre.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

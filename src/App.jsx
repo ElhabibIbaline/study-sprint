@@ -9,6 +9,7 @@ import Glossaire from "./pages/Glossaire";
 import JeuAssociation from "./pages/JeuAssociation";
 import Methodologie from "./pages/Methodologie";
 import Progression from "./pages/Progression";
+import Sprint from "./pages/Sprint";
 import MethodeCasPratique from "./pages/MethodeCasPratique";
 import MethodeQcm from "./pages/MethodeQcm";
 import Quiz from "./pages/Quiz";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/jeu-association" element={<JeuAssociation />} />
           <Route path="/quiz" element={<QuizCategories />} />
           <Route path="/quiz/:categorie" element={<Quiz />} />
+          <Route path="/sprint" element={<Sprint />} />
           <Route path="/methodologie" element={<Methodologie />} />
           <Route path="/methodologie/cas-pratique" element={<MethodeCasPratique />} />
           <Route path="/methodologie/qcm" element={<MethodeQcm />} />

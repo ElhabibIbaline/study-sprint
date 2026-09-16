@@ -18,6 +18,14 @@ function QuizCategories() {
           </Link>
         ))}
       </div>
+
+      <section className="article-cta" style={{ marginTop: "2.5rem" }}>
+        <div>
+          <p className="home-eyebrow">Envie de rapidité ?</p>
+          <h2>Essaie le sprint chrono, toutes catégories mélangées.</h2>
+        </div>
+        <Link className="home-button home-button--primary" to="/sprint">Faire un sprint chrono</Link>
+      </section>
     </div>
   );
 }
