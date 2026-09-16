@@ -109,6 +109,11 @@ function Accueil() {
             <div><h3>S'entraîner sur un cas pratique</h3><p>Un dossier complet, des questions et des corrigés indicatifs.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
+          <Link className="resource-card" to="/jeu-association">
+            <span className="resource-card__number">08</span>
+            <div><h3>Jouer pour retenir plus vite</h3><p>Un jeu d'association chronométré, seul contre le chrono.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

@@ -1766,6 +1766,107 @@ button:hover {
   background: #fff0ef;
 }
 
+/* Jeu d'association */
+.jeu-configuration {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #dfe4ec;
+  border-radius: 1.25rem;
+  background: white;
+}
+
+.jeu-resultat h2 {
+  margin-top: 0;
+}
+
+.jeu-barre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.9rem;
+  background: #122044;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.jeu-chrono {
+  font-size: 1.1rem;
+  font-weight: 850;
+}
+
+.jeu-record {
+  margin-left: auto;
+  color: #8fb0ff;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--colonnes, 4), 1fr);
+  gap: 0.6rem;
+}
+
+.memory-card,
+.memory-card:hover {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-2px);
+}
+
+.memory-card--revele,
+.memory-card--revele:hover {
+  background: white;
+  color: #172033;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.35;
+  border: 1px solid #dfe4ec;
+  cursor: default;
+  transform: none;
+}
+
+.memory-card--trouve,
+.memory-card--trouve:hover {
+  background: #eaf8f4;
+  border: 1px solid #0d9277;
+  color: #087c65;
+  cursor: default;
+  opacity: 0.9;
+  transform: none;
+}
+
+@media (max-width: 620px) {
+  .memory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .memory-card {
+    min-height: 78px;
+    font-size: 1.15rem;
+  }
+
+  .jeu-record {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 650px) {
   .method-choice-grid,
   .time-grid,

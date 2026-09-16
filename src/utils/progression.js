@@ -8,6 +8,8 @@ function etatParDefaut() {
     flashcardsRevues: 0,
     paquetsMaitrises: [],
     annalesTerminees: [],
+    jeuxTermines: 0,
+    jeuxParfaits: 0,
   };
 }
 
@@ -66,6 +68,13 @@ export function enregistrerFlashcardRevue() {
   return sauvegarder(etat);
 }
 
+export function enregistrerJeuTermine(sansErreur) {
+  let etat = chargerProgression();
+  etat = marquerJourActif(etat);
+  etat = { ...etat, jeuxTermines: etat.jeuxTermines + 1, jeuxParfaits: etat.jeuxParfaits + (sansErreur ? 1 : 0) };
+  return sauvegarder(etat);
+}
+
 export function enregistrerPaquetMaitrise(paquet) {
   let etat = chargerProgression();
   if (etat.paquetsMaitrises.includes(paquet)) return etat;
@@ -109,6 +118,8 @@ export const BADGES = [
   { id: "trois-paquets", titre: "Tout maîtrisé", description: "Maîtrise entièrement les trois paquets de flashcards.", condition: (e) => e.paquetsMaitrises.length >= 3 },
   { id: "explorateur-annales", titre: "Explorateur des annales", description: "Termine une première annale corrigée.", condition: (e) => e.annalesTerminees.length >= 1 },
   { id: "toutes-annales", titre: "Toutes les annales", description: "Termine les cinq annales disponibles.", condition: (e) => e.annalesTerminees.length >= 5 },
+  { id: "premier-jeu", titre: "Premier jeu", description: "Termine une première partie du jeu d'association.", condition: (e) => e.jeuxTermines >= 1 },
+  { id: "jeu-parfait", titre: "Sans une erreur", description: "Termine une partie du jeu d'association sans aucune erreur.", condition: (e) => e.jeuxParfaits >= 1 },
 ];
 
 export function badgesDebloques(etat) {
