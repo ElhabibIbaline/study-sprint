@@ -109,8 +109,53 @@ function Concours() {
         </p>
       </section>
 
-      <section className="lesson-section lesson-section--final">
+      <section className="lesson-section">
         <span className="lesson-number">05</span>
+        <h2>Le jour de l'épreuve : matériel et règles</h2>
+        <p>
+          Les règles précises figurent sur ta convocation officielle (elles peuvent varier
+          légèrement d'un centre d'examen à l'autre) — voici les repères habituels pour ne pas
+          être pris·e au dépourvu.
+        </p>
+        <div className="do-dont">
+          <div>
+            <strong>À prévoir</strong>
+            <p>
+              Une pièce d'identité en cours de validité (carte nationale d'identité, passeport ou
+              titre de séjour)<br />
+              Ta convocation (imprimée si cela est demandé)<br />
+              Plusieurs stylos noirs ou bleus, en cas de panne<br />
+              Une montre non connectée si tu veux suivre le temps sans horloge murale
+            </p>
+          </div>
+          <div>
+            <strong>Interdit en salle</strong>
+            <p>
+              Téléphone et objets connectés — éteints et rangés, hors de portée<br />
+              Calculatrice, sauf mention contraire explicite sur la convocation<br />
+              Documents, notes ou brouillons personnels<br />
+              Tout signe distinctif sur la copie (nom, initiales, signe convenu...)
+            </p>
+          </div>
+        </div>
+        <div className="method-warning">
+          <strong>Anonymat et fraude</strong>
+          <p>
+            La copie doit rester strictement anonyme : le moindre signe distinctif peut entraîner
+            l'annulation de l'épreuve. De même, toute tentative de fraude (téléphone consulté,
+            documents non autorisés...) expose à l'exclusion du concours, voire à une interdiction
+            de se présenter à d'autres concours pendant plusieurs années.
+          </p>
+        </div>
+        <ul className="check-list">
+          <li>Arrive au moins 30 minutes avant l'heure convoquée : les portes ferment à l'heure de début et un retard peut empêcher l'accès à la salle.</li>
+          <li>Relis ta convocation la veille pour connaître le lieu exact, la salle et les horaires précis.</li>
+          <li>Une sortie anticipée est généralement interdite avant un certain délai (souvent la première heure) — prévois de rester jusqu'au bout si besoin.</li>
+        </ul>
+      </section>
+
+      <section className="lesson-section lesson-section--final">
+        <span className="lesson-number">06</span>
         <h2>Ressources officielles</h2>
         <ul className="check-list">
           <li><a href="https://concours.dgfip.finances.gouv.fr/" target="_blank" rel="noreferrer">Portail d'inscription aux concours de la DGFiP</a></li>
