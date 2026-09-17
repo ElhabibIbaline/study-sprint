@@ -14,9 +14,9 @@ function Quiz() {
 
   if (!questions) {
     return (
-      <div>
+      <div className="learning-page">
         <h1>Catégorie introuvable</h1>
-        <Link to="/quiz">Retour aux catégories</Link>
+        <Link className="back-link" to="/quiz">← Retour aux catégories</Link>
       </div>
     );
   }
@@ -48,11 +48,16 @@ function Quiz() {
 
   if (quizTermine) {
     return (
-      <div>
-        <h1>Quiz terminé : {categoriesInfo[categorie]}</h1>
-        <p>Ton score : {score} / {questions.length}</p>
-        <button onClick={recommencer}>Recommencer</button>{" "}
-        <Link to="/quiz">Choisir une autre catégorie</Link>
+      <div className="learning-page">
+        <header className="learning-hero learning-hero--compact">
+          <p className="home-eyebrow">{categoriesInfo[categorie]}</p>
+          <h1>Quiz terminé !</h1>
+          <p>Ton score : {score} / {questions.length}.</p>
+        </header>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <button className="home-button home-button--primary" onClick={recommencer}>Recommencer</button>
+          <Link className="home-button home-button--secondary" to="/quiz">Choisir une autre catégorie</Link>
+        </div>
       </div>
     );
   }
@@ -60,33 +65,37 @@ function Quiz() {
   const q = questions[questionActuelle];
 
   return (
-    <div>
-      <Link to="/quiz">← Retour aux catégories</Link>
-      <p style={{ color: "#1d4ed8", fontWeight: "bold", marginTop: "1rem" }}>{categoriesInfo[categorie]}</p>
-      <p>Question {questionActuelle + 1} / {questions.length}</p>
-      <h2>{q.question}</h2>
+    <div className="learning-page">
+      <Link className="back-link" to="/quiz">← Retour aux catégories</Link>
+      <header className="learning-hero learning-hero--compact">
+        <p className="home-eyebrow">{categoriesInfo[categorie]} · question {questionActuelle + 1} / {questions.length}</p>
+        <h1>{q.question}</h1>
+      </header>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", maxWidth: "400px" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", maxWidth: "520px" }}>
         {q.choix.map((choix, index) => {
-          let couleur = "white";
+          let classe = "sprint-choix";
           if (reponseChoisie !== null) {
-            if (index === q.bonneReponse) couleur = "lightgreen";
-            else if (index === reponseChoisie) couleur = "lightcoral";
+            if (index === q.bonneReponse) classe += " sprint-choix--correct";
+            else if (index === reponseChoisie) classe += " sprint-choix--faux";
           }
           return (
-            <button
-              key={index}
-              onClick={() => choisirReponse(index)}
-              style={{ padding: "0.75rem", backgroundColor: couleur, cursor: "pointer" }}
-            >
+            <button key={index} className={classe} onClick={() => choisirReponse(index)} disabled={reponseChoisie !== null}>
               {choix}
             </button>
           );
         })}
       </div>
 
+      {reponseChoisie !== null && q.explication && (
+        <div className="example-box" style={{ maxWidth: "520px" }}>
+          <span>💡 Explication</span>
+          <p>{q.explication}</p>
+        </div>
+      )}
+
       {reponseChoisie !== null && (
-        <button style={{ marginTop: "1rem" }} onClick={questionSuivante}>
+        <button className="home-button home-button--primary lesson-action" onClick={questionSuivante}>
           {questionActuelle + 1 < questions.length ? "Question suivante" : "Voir le résultat"}
         </button>
       )}
