@@ -52,6 +52,7 @@ function Astuces() {
           <h2>Applique ces règles sur un quiz ou un sprint chrono.</h2>
         </div>
         <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <Link className="home-button home-button--light" to="/cartes-mentales">Voir les cartes mentales</Link>
           <Link className="home-button home-button--light" to="/sprint">Sprint chrono</Link>
           <Link className="home-button home-button--primary" to="/quiz">Faire un quiz</Link>
         </div>

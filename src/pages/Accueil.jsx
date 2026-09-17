@@ -124,6 +124,11 @@ function Accueil() {
             <div><h3>Repérer les pièges récurrents</h3><p>Règle, exception et exemple pour les questions qui reviennent chaque session.</p></div>
             <span className="resource-card__arrow" aria-hidden="true">→</span>
           </Link>
+          <Link className="resource-card" to="/cartes-mentales">
+            <span className="resource-card__number">11</span>
+            <div><h3>Voir la synthèse visuelle</h3><p>Trois cartes mentales pour réviser le concours, le QCM et le cas pratique d'un coup d'œil.</p></div>
+            <span className="resource-card__arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

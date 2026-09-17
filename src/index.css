@@ -1997,6 +1997,85 @@ button:hover {
   margin-top: 0;
 }
 
+/* Cartes mentales */
+.mindmap {
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e4e8ee;
+}
+
+.mindmap:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mindmap__titre {
+  margin: 0 0 1.5rem;
+  color: #122044;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  text-align: center;
+}
+
+.mindmap__hub {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 1.1rem 1.75rem;
+  border-radius: 1.1rem;
+  background: linear-gradient(120deg, #122044, #1d4ed8);
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: 0 16px 32px rgba(18, 32, 68, 0.18);
+}
+
+.mindmap__connector {
+  margin: 0.5rem 0;
+  color: #aebce0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.mindmap__branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.mindmap__branch {
+  padding: 1.1rem 1.25rem;
+  border-top: 4px solid #1d4ed8;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 8px 22px rgba(37, 62, 116, 0.07);
+}
+
+.mindmap__branch strong {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: #122044;
+  font-size: 1rem;
+}
+
+.mindmap__branch ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.mindmap__branch li {
+  color: #58657a;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.mindmap__branch--bleu { border-top-color: #1d4ed8; background: #f5f8ff; }
+.mindmap__branch--vert { border-top-color: #0d9277; background: #f2fbf8; }
+.mindmap__branch--orange { border-top-color: #e07b39; background: #fff8f2; }
+.mindmap__branch--violet { border-top-color: #6d3fc0; background: #faf7ff; }
+.mindmap__branch--or { border-top-color: #c99a1a; background: #fffbf0; }
+
 @media (max-width: 650px) {
   .method-choice-grid,
   .time-grid,

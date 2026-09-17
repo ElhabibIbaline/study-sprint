@@ -15,6 +15,7 @@ import MethodeQcm from "./pages/MethodeQcm";
 import Quiz from "./pages/Quiz";
 import Articles from "./pages/Articles";
 import Astuces from "./pages/Astuces";
+import CartesMentales from "./pages/CartesMentales";
 import Liens from "./pages/Liens";
 import QuizCategories from "./pages/QuizCategories";
 import Annales from "./pages/Annales";
@@ -42,6 +43,7 @@ function App() {
           <Route path="/methodologie/cas-pratique" element={<MethodeCasPratique />} />
           <Route path="/methodologie/qcm" element={<MethodeQcm />} />
           <Route path="/astuces" element={<Astuces />} />
+          <Route path="/cartes-mentales" element={<CartesMentales />} />
           <Route path="/cas-pratique" element={<CasPratique />} />
           <Route path="/cas-pratique/:id" element={<CasPratiqueDetail />} />
           <Route path="/quiz" element={<Quiz />} />
