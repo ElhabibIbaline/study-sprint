@@ -163,7 +163,7 @@ function Sprint() {
             ))}
           </div>
 
-          <p style={{ color: "#69758b", fontSize: "0.88rem", marginBottom: "1.5rem" }}>
+          <p style={{ color: "#7a7166", fontSize: "0.88rem", marginBottom: "1.5rem" }}>
             Meilleur score sur cette configuration : <strong>{chargerRecordSprint(categorie, duree)}</strong>
           </p>
 

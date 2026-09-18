@@ -1,3 +1,11 @@
+:root {
+  --color-primary: #dc2626;
+  --color-primary-dark: #991b1b;
+  --color-accent: #f97316;
+  --color-accent-dark: #c2410c;
+  --color-ink: #241a15;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,13 +17,13 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #f4f6f8;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #f7f4f0;
   color: #1a1a1a;
 }
 
 a {
-  color: #1d4ed8;
+  color: #dc2626;
   text-decoration: none;
 }
 
@@ -31,7 +39,7 @@ button {
 }
 
 button:hover {
-  background-color: #e5e7eb;
+  background-color: #e8e0d5;
 }
 
 .app-shell {
@@ -50,7 +58,7 @@ button:hover {
 .site-footer {
   margin-top: auto;
   padding: 1.5rem 2rem;
-  background-color: #1d4ed8;
+  background-color: #dc2626;
   color: white;
 }
 
@@ -58,9 +66,9 @@ button:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #1d4ed8;
+  background: #dc2626;
   color: white;
-  box-shadow: 0 4px 16px rgba(8, 20, 55, 0.18);
+  box-shadow: 0 4px 16px rgba(30, 20, 14, 0.18);
 }
 
 .site-nav__inner {
@@ -123,11 +131,11 @@ button:hover {
 .site-nav__link--active,
 .site-nav__link--active:hover {
   background: white;
-  color: #1d4ed8;
+  color: #dc2626;
 }
 
 .home-page {
-  color: #172033;
+  color: #241f1c;
 }
 
 .home-hero {
@@ -140,7 +148,7 @@ button:hover {
 
 .home-eyebrow {
   margin: 0 0 0.9rem;
-  color: #1d4ed8;
+  color: #dc2626;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.11em;
@@ -150,7 +158,7 @@ button:hover {
 .home-hero h1 {
   max-width: 720px;
   margin: 0;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(2rem, 3.6vw, 3.25rem);
   line-height: 1.05;
   letter-spacing: -0.045em;
@@ -159,7 +167,7 @@ button:hover {
 .home-lead {
   max-width: 640px;
   margin: 1.75rem 0 0;
-  color: #536078;
+  color: #6b6259;
   font-size: 1.12rem;
   line-height: 1.75;
 }
@@ -190,19 +198,19 @@ button:hover {
 }
 
 .home-button--primary {
-  background: #1d4ed8;
+  background: #dc2626;
   color: white;
-  box-shadow: 0 12px 25px rgba(29, 78, 216, 0.2);
+  box-shadow: 0 12px 25px rgba(220, 38, 38, 0.2);
 }
 
 .home-button--primary:hover {
-  background: #153eaf;
+  background: #991b1b;
 }
 
 .home-button--secondary {
-  border-color: #cad2e1;
+  border-color: #e6d7c3;
   background: white;
-  color: #172033;
+  color: #241f1c;
 }
 
 .home-stats {
@@ -218,7 +226,7 @@ button:hover {
 }
 
 .home-stats dt {
-  color: #122044;
+  color: #241a15;
   font-size: 1.55rem;
   font-weight: 850;
   letter-spacing: -0.04em;
@@ -226,7 +234,7 @@ button:hover {
 
 .home-stats dd {
   margin: 0;
-  color: #69758b;
+  color: #7a7166;
   font-size: 0.78rem;
   font-weight: 650;
 }
@@ -235,17 +243,17 @@ button:hover {
   position: relative;
   overflow: hidden;
   padding: 1.8rem;
-  border: 1px solid #d9e2f8;
+  border: 1px solid #f3ddc8;
   border-radius: 1.25rem;
   background: #fff;
-  box-shadow: 0 24px 55px rgba(37, 62, 116, 0.13);
+  box-shadow: 0 24px 55px rgba(40, 28, 20, 0.13);
 }
 
 .session-card::before {
   position: absolute;
   inset: 0 0 auto;
   height: 0.35rem;
-  background: linear-gradient(90deg, #1d4ed8, #38bdf8);
+  background: linear-gradient(90deg, #dc2626, #f97316);
   content: "";
 }
 
@@ -253,7 +261,7 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  color: #5f6b82;
+  color: #756c61;
   font-size: 0.82rem;
   font-weight: 750;
 }
@@ -261,8 +269,8 @@ button:hover {
 .session-card__badge {
   padding: 0.3rem 0.55rem;
   border-radius: 999px;
-  background: #e8efff;
-  color: #1d4ed8;
+  background: #ffe4cc;
+  color: #dc2626;
 }
 
 .session-card__streak {
@@ -281,7 +289,7 @@ button:hover {
 
 .session-card h2 {
   margin: 1.1rem 0 1.35rem;
-  color: #122044;
+  color: #241a15;
   font-size: 1.45rem;
   letter-spacing: -0.025em;
 }
@@ -300,7 +308,7 @@ button:hover {
   align-items: center;
   gap: 0.85rem;
   padding: 0.9rem 0;
-  border-top: 1px solid #edf0f5;
+  border-top: 1px solid #efe6da;
 }
 
 .session-steps li > span {
@@ -309,8 +317,8 @@ button:hover {
   display: grid;
   place-items: center;
   border-radius: 0.65rem;
-  background: #f0f4ff;
-  color: #1d4ed8;
+  background: #fff0e0;
+  color: #dc2626;
   font-size: 0.72rem;
   font-weight: 850;
 }
@@ -321,20 +329,20 @@ button:hover {
 }
 
 .session-steps strong {
-  color: #26324a;
+  color: #33291f;
   font-size: 0.92rem;
 }
 
 .session-steps small {
   margin-top: 0.15rem;
-  color: #7a8496;
+  color: #8a8175;
 }
 
 .session-card__link {
   display: flex;
   justify-content: space-between;
   margin-top: 0.9rem;
-  color: #1d4ed8;
+  color: #dc2626;
   font-weight: 800;
 }
 
@@ -344,7 +352,7 @@ button:hover {
 
 .home-section {
   padding: 4.5rem 0;
-  border-top: 1px solid #dfe4ec;
+  border-top: 1px solid #e7ded4;
 }
 
 .home-section__heading {
@@ -358,7 +366,7 @@ button:hover {
 .home-section__heading h2,
 .method-banner h2 {
   margin: 0;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(2rem, 3.5vw, 3rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -367,7 +375,7 @@ button:hover {
 .home-section__heading > p {
   max-width: 470px;
   margin: 0;
-  color: #647086;
+  color: #766d62;
   line-height: 1.65;
 }
 
@@ -382,16 +390,16 @@ button:hover {
   display: grid;
   grid-template-rows: auto 1fr auto;
   padding: 1.5rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1rem;
   background: #fff;
-  color: #172033;
+  color: #241f1c;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .resource-card:hover {
-  border-color: #aebce0;
-  box-shadow: 0 18px 35px rgba(37, 62, 116, 0.1);
+  border-color: #d9bd93;
+  box-shadow: 0 18px 35px rgba(40, 28, 20, 0.1);
   text-decoration: none;
   transform: translateY(-4px);
 }
@@ -402,8 +410,8 @@ button:hover {
   display: grid;
   place-items: center;
   border-radius: 0.7rem;
-  background: #eaf0ff;
-  color: #1d4ed8;
+  background: #ffe6d1;
+  color: #dc2626;
   font-size: 0.75rem;
   font-weight: 850;
 }
@@ -420,19 +428,19 @@ button:hover {
 
 .resource-card h3 {
   margin: 1.8rem 0 0.6rem;
-  color: #122044;
+  color: #241a15;
   font-size: 1.22rem;
 }
 
 .resource-card p {
   margin: 0;
-  color: #667287;
+  color: #786f63;
   line-height: 1.6;
 }
 
 .resource-card__arrow {
   justify-self: end;
-  color: #1d4ed8;
+  color: #dc2626;
   font-size: 1.3rem;
   font-weight: 800;
 }
@@ -444,12 +452,12 @@ button:hover {
   gap: 2.5rem;
   padding: clamp(2rem, 5vw, 3.5rem);
   border-radius: 1.25rem;
-  background: #122044;
+  background: #241a15;
   color: white;
 }
 
 .method-banner .home-eyebrow {
-  color: #8fb0ff;
+  color: #ffb877;
 }
 
 .method-banner h2 {
@@ -459,14 +467,14 @@ button:hover {
 .method-banner p:last-child {
   max-width: 650px;
   margin: 1rem 0 0;
-  color: #c7d1e8;
+  color: #f3c8a0;
   line-height: 1.65;
 }
 
 .home-button--light {
   flex: 0 0 auto;
   background: white;
-  color: #122044;
+  color: #241a15;
 }
 
 @media (max-width: 850px) {
@@ -572,7 +580,7 @@ button:hover {
 
 /* Parcours pédagogiques */
 .learning-page {
-  color: #172033;
+  color: #241f1c;
 }
 
 .learning-hero {
@@ -582,7 +590,7 @@ button:hover {
 
 .learning-hero h1 {
   margin: 0;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(1.9rem, 3.8vw, 3rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
@@ -592,7 +600,7 @@ button:hover {
 .learning-hero > div > p:last-child {
   max-width: 720px;
   margin: 1.4rem 0 0;
-  color: #5b677d;
+  color: #6f6659;
   font-size: 1.08rem;
   line-height: 1.75;
 }
@@ -621,11 +629,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding: clamp(1.7rem, 4vw, 2.6rem);
-  border: 1px solid #d9e2f8;
+  border: 1px solid #f3ddc8;
   border-radius: 1.4rem;
   background: #fff;
-  color: #172033;
-  box-shadow: 0 18px 40px rgba(37, 62, 116, 0.08);
+  color: #241f1c;
+  box-shadow: 0 18px 40px rgba(40, 28, 20, 0.08);
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
@@ -635,7 +643,7 @@ button:hover {
 }
 
 .method-choice:hover {
-  box-shadow: 0 24px 45px rgba(37, 62, 116, 0.14);
+  box-shadow: 0 24px 45px rgba(40, 28, 20, 0.14);
   text-decoration: none;
   transform: translateY(-4px);
 }
@@ -644,8 +652,8 @@ button:hover {
   align-self: flex-start;
   padding: 0.4rem 0.7rem;
   border-radius: 999px;
-  background: #e8efff;
-  color: #1d4ed8;
+  background: #ffe4cc;
+  color: #dc2626;
   font-size: 0.76rem;
   font-weight: 800;
 }
@@ -657,14 +665,14 @@ button:hover {
 
 .method-choice h2 {
   margin: 1.5rem 0 0.8rem;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   letter-spacing: -0.04em;
 }
 
 .method-choice p,
 .method-choice li {
-  color: #5f6b80;
+  color: #746b60;
   line-height: 1.65;
 }
 
@@ -679,7 +687,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   margin-top: auto;
-  color: #1d4ed8;
+  color: #dc2626;
 }
 
 .learning-routine {
@@ -689,7 +697,7 @@ button:hover {
   margin-top: 4rem;
   padding: clamp(1.7rem, 4vw, 3rem);
   border-radius: 1.25rem;
-  background: #122044;
+  background: #241a15;
   color: white;
 }
 
@@ -703,7 +711,7 @@ button:hover {
 
 .learning-routine .home-eyebrow,
 .article-cta .home-eyebrow {
-  color: #8fb0ff;
+  color: #ffb877;
 }
 
 .learning-routine ol {
@@ -723,13 +731,13 @@ button:hover {
 }
 
 .learning-routine li span {
-  color: #8fb0ff;
+  color: #ffb877;
   font-weight: 800;
 }
 
 .back-link {
   display: inline-block;
-  color: #1d4ed8;
+  color: #dc2626;
   font-weight: 750;
 }
 
@@ -742,20 +750,20 @@ button:hover {
 .exam-facts div {
   min-width: 7rem;
   padding: 1rem;
-  border: 1px solid #d9e2f8;
+  border: 1px solid #f3ddc8;
   border-radius: 0.9rem;
   background: white;
 }
 
 .exam-facts dt {
-  color: #122044;
+  color: #241a15;
   font-size: 1.25rem;
   font-weight: 850;
 }
 
 .exam-facts dd {
   margin: 0.15rem 0 0;
-  color: #788397;
+  color: #887f73;
   font-size: 0.75rem;
 }
 
@@ -774,14 +782,14 @@ button:hover {
   gap: 0.2rem;
   padding: 1.1rem;
   overflow-y: auto;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1rem;
   background: white;
 }
 
 .method-toc > span {
   margin: 0.2rem 0 0.65rem;
-  color: #122044;
+  color: #241a15;
   font-size: 0.78rem;
   font-weight: 850;
   letter-spacing: 0.08em;
@@ -791,15 +799,15 @@ button:hover {
 .method-toc a {
   padding: 0.5rem 0.55rem;
   border-radius: 0.45rem;
-  color: #626e82;
+  color: #756c61;
   font-size: 0.8rem;
   font-weight: 650;
   line-height: 1.3;
 }
 
 .method-toc a:hover {
-  background: #edf2ff;
-  color: #1d4ed8;
+  background: #ffedd9;
+  color: #dc2626;
   text-decoration: none;
 }
 
@@ -811,7 +819,7 @@ button:hover {
   scroll-margin-top: calc(4.25rem + 1rem);
   margin-bottom: 1.25rem;
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1.15rem;
   background: white;
 }
@@ -823,15 +831,15 @@ button:hover {
   height: 2.45rem;
   margin-bottom: 1rem;
   border-radius: 0.7rem;
-  background: #e8efff;
-  color: #1d4ed8;
+  background: #ffe4cc;
+  color: #dc2626;
   font-size: 0.76rem;
   font-weight: 850;
 }
 
 .lesson-section h2 {
   margin: 0 0 1rem;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(1.6rem, 3vw, 2.15rem);
   letter-spacing: -0.035em;
 }
@@ -843,7 +851,7 @@ button:hover {
 .domain-grid p,
 .week-grid p,
 .confidence-grid p {
-  color: #58657a;
+  color: #6d6459;
   line-height: 1.72;
 }
 
@@ -853,9 +861,9 @@ button:hover {
 .active-task {
   margin-top: 1.4rem;
   padding: 1.1rem 1.2rem;
-  border-left: 4px solid #1d4ed8;
+  border-left: 4px solid #dc2626;
   border-radius: 0 0.75rem 0.75rem 0;
-  background: #eef3ff;
+  background: #ffecdb;
 }
 
 .method-warning {
@@ -873,7 +881,7 @@ button:hover {
 .example-box p,
 .active-task p {
   margin: 0.4rem 0 0;
-  color: #536078;
+  color: #6b6259;
   line-height: 1.6;
 }
 
@@ -890,7 +898,7 @@ button:hover {
   position: relative;
   padding: 1rem 1rem 1rem 3.5rem;
   border-radius: 0.8rem;
-  background: #f6f8fb;
+  background: #faf5ee;
   counter-increment: method-step;
 }
 
@@ -903,7 +911,7 @@ button:hover {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: #1d4ed8;
+  background: #dc2626;
   color: white;
   content: counter(method-step);
   font-size: 0.72rem;
@@ -933,7 +941,7 @@ button:hover {
 .final-checks > div {
   padding: 1rem;
   border-radius: 0.8rem;
-  background: #f5f7fa;
+  background: #f9f4ee;
 }
 
 .time-grid div {
@@ -944,13 +952,13 @@ button:hover {
 .time-grid strong,
 .week-grid > div > span,
 .timeline > div > span {
-  color: #1d4ed8;
+  color: #dc2626;
   font-weight: 850;
 }
 
 .time-grid span,
 .timeline small {
-  color: #6a768a;
+  color: #796f64;
 }
 
 .plan-grid div,
@@ -973,7 +981,7 @@ button:hover {
   display: grid;
   gap: 0.7rem;
   padding-left: 1.25rem;
-  color: #58657a;
+  color: #6d6459;
   line-height: 1.6;
 }
 
@@ -995,7 +1003,7 @@ button:hover {
 
 .do-dont p {
   margin: 0.65rem 0 0;
-  color: #58657a;
+  color: #6d6459;
   line-height: 1.75;
 }
 
@@ -1008,12 +1016,12 @@ button:hover {
   grid-template-columns: minmax(150px, 0.75fr) 1.25fr;
   gap: 1rem;
   padding: 0.9rem 0;
-  border-top: 1px solid #e4e8ee;
+  border-top: 1px solid #ece2d6;
 }
 
 .lesson-section--final {
-  border-color: #b9caef;
-  background: #f9fbff;
+  border-color: #f0d2ab;
+  background: #fff8f0;
 }
 
 .final-checks strong,
@@ -1023,25 +1031,25 @@ button:hover {
 
 .final-checks strong {
   margin-bottom: 0.65rem;
-  color: #122044;
+  color: #241a15;
 }
 
 .final-checks label {
   margin-top: 0.55rem;
-  color: #58657a;
+  color: #6d6459;
   line-height: 1.45;
 }
 
 .final-checks input {
   margin-right: 0.45rem;
-  accent-color: #1d4ed8;
+  accent-color: #dc2626;
 }
 
 .method-mantra {
   margin-top: 1.5rem;
   padding: 1.15rem;
   border-radius: 0.8rem;
-  background: #122044;
+  background: #241a15;
   color: white;
   text-align: center;
   font-weight: 800;
@@ -1049,11 +1057,11 @@ button:hover {
 
 .method-mantra span {
   padding: 0 0.35rem;
-  color: #8fb0ff;
+  color: #ffb877;
 }
 
 .official-note {
-  color: #778296;
+  color: #877e72;
   font-size: 0.82rem;
   text-align: right;
 }
@@ -1068,11 +1076,11 @@ button:hover {
   display: grid;
   gap: 0.3rem;
   padding: 1rem;
-  border-left: 2px solid #d6def0;
+  border-left: 2px solid #f0dcc0;
 }
 
 .timeline strong {
-  color: #293550;
+  color: #362d21;
   font-size: 0.88rem;
 }
 
@@ -1082,7 +1090,7 @@ button:hover {
 
 .confidence-grid div:nth-child(1) { background: #eaf8f4; }
 .confidence-grid div:nth-child(2) { background: #fff7df; }
-.confidence-grid div:nth-child(3) { background: #f1f3f7; }
+.confidence-grid div:nth-child(3) { background: #f6f0e8; }
 
 .lesson-action {
   margin-top: 1.5rem;
@@ -1095,7 +1103,7 @@ button:hover {
 
 .learning-article {
   overflow: hidden;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1rem;
   background: white;
 }
@@ -1115,7 +1123,7 @@ button:hover {
   position: absolute;
   top: 50%;
   right: 1.5rem;
-  color: #1d4ed8;
+  color: #dc2626;
   content: "+";
   font-size: 1.6rem;
   font-weight: 500;
@@ -1125,7 +1133,7 @@ button:hover {
 .learning-article[open] summary::after { content: "−"; }
 
 .learning-article__meta {
-  color: #1d4ed8;
+  color: #dc2626;
   font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.07em;
@@ -1133,23 +1141,23 @@ button:hover {
 }
 
 .learning-article summary strong {
-  color: #122044;
+  color: #241a15;
   font-size: 1.2rem;
 }
 
 .learning-article summary small {
-  color: #69758a;
+  color: #7a7166;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
 .learning-article__body {
   padding: 0 1.5rem 1.5rem;
-  border-top: 1px solid #edf0f4;
+  border-top: 1px solid #efe6da;
 }
 
 .learning-article__body > p {
-  color: #536078;
+  color: #6b6259;
   line-height: 1.75;
 }
 
@@ -1174,7 +1182,7 @@ button:hover {
   margin-top: 3rem;
   padding: clamp(1.7rem, 4vw, 2.7rem);
   border-radius: 1.2rem;
-  background: #122044;
+  background: #241a15;
   color: white;
 }
 
@@ -1213,10 +1221,10 @@ button:hover {
   width: 100%;
   margin-top: 1.1rem;
   padding: 0.9rem 1rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 0.8rem;
-  background: #fbfcfe;
-  color: #172033;
+  background: #fffaf3;
+  color: #241f1c;
   font-family: inherit;
   font-size: 0.92rem;
   line-height: 1.6;
@@ -1224,20 +1232,20 @@ button:hover {
 }
 
 .reponse-brouillon:focus {
-  outline: 2px solid #1d4ed8;
+  outline: 2px solid #dc2626;
   outline-offset: 1px;
 }
 
 .corrige-toggle {
   margin-top: 1rem;
-  border: 1px dashed #b9c3da;
+  border: 1px dashed #e0cba8;
   border-radius: 0.8rem;
   overflow: hidden;
 }
 
 .corrige-toggle summary {
   padding: 0.85rem 1.1rem;
-  color: #1d4ed8;
+  color: #dc2626;
   font-weight: 800;
   font-size: 0.9rem;
   cursor: pointer;
@@ -1249,13 +1257,13 @@ button:hover {
 }
 
 .corrige-toggle[open] summary {
-  border-bottom: 1px solid #e4e8ee;
+  border-bottom: 1px solid #ece2d6;
 }
 
 .corrige-toggle__body {
   padding: 1rem 1.1rem 1.3rem;
-  background: #f6f8fb;
-  color: #3d4a63;
+  background: #faf5ee;
+  color: #5c5348;
   line-height: 1.7;
   white-space: pre-line;
 }
@@ -1272,35 +1280,35 @@ button:hover {
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1.25rem 1.5rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1rem;
   background: white;
-  color: #172033;
+  color: #241f1c;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
 .hub-card:hover {
-  border-color: #aebce0;
-  box-shadow: 0 18px 35px rgba(37, 62, 116, 0.1);
+  border-color: #d9bd93;
+  box-shadow: 0 18px 35px rgba(40, 28, 20, 0.1);
   text-decoration: none;
   transform: translateY(-2px);
 }
 
 .hub-card strong {
   display: block;
-  color: #122044;
+  color: #241a15;
   font-size: 1.08rem;
 }
 
 .hub-card p {
   margin: 0.3rem 0 0;
-  color: #69758b;
+  color: #7a7166;
   font-size: 0.9rem;
 }
 
 .hub-card__arrow {
   flex: 0 0 auto;
-  color: #1d4ed8;
+  color: #dc2626;
   font-size: 1.3rem;
   font-weight: 800;
 }
@@ -1323,14 +1331,14 @@ button:hover {
   width: 100%;
   max-width: 420px;
   padding: 0.8rem 1rem;
-  border: 1px solid #cad2e1;
+  border: 1px solid #e6d7c3;
   border-radius: 0.7rem;
   background: white;
   font-size: 0.95rem;
 }
 
 .glossary-search:focus {
-  outline: 2px solid #1d4ed8;
+  outline: 2px solid #dc2626;
   outline-offset: 1px;
 }
 
@@ -1342,24 +1350,24 @@ button:hover {
 
 .glossary-chip {
   padding: 0.5rem 0.9rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 999px;
   background: white;
-  color: #536078;
+  color: #6b6259;
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
 }
 
 .glossary-chip:hover {
-  border-color: #aebce0;
+  border-color: #d9bd93;
   background-color: white;
 }
 
 .glossary-chip--active,
 .glossary-chip--active:hover {
-  border-color: #1d4ed8;
-  background-color: #1d4ed8;
+  border-color: #dc2626;
+  background-color: #dc2626;
   color: white;
 }
 
@@ -1371,7 +1379,7 @@ button:hover {
 
 .glossary-card {
   padding: 0;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 0.9rem;
   background: white;
   overflow: hidden;
@@ -1391,14 +1399,14 @@ button:hover {
 }
 
 .glossary-card summary strong {
-  color: #122044;
+  color: #241a15;
   font-size: 1.02rem;
 }
 
 .glossary-card p {
   margin: 0;
   padding: 0 1.3rem 1.2rem;
-  color: #58657a;
+  color: #6d6459;
   line-height: 1.6;
 }
 
@@ -1406,8 +1414,8 @@ button:hover {
   align-self: flex-start;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  background: #e8efff;
-  color: #1d4ed8;
+  background: #ffe4cc;
+  color: #dc2626;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -1431,9 +1439,9 @@ button:hover {
 
 .glossary-empty {
   padding: 2rem;
-  border: 1px dashed #cad2e1;
+  border: 1px dashed #e6d7c3;
   border-radius: 1rem;
-  color: #69758b;
+  color: #7a7166;
   text-align: center;
 }
 
@@ -1453,24 +1461,24 @@ button:hover {
 
 .flashcard-deck-tab {
   padding: 0.7rem 1.1rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 0.8rem;
   background: white;
-  color: #536078;
+  color: #6b6259;
   font-weight: 800;
   font-size: 0.92rem;
   cursor: pointer;
 }
 
 .flashcard-deck-tab:hover {
-  border-color: #aebce0;
+  border-color: #d9bd93;
   background-color: white;
 }
 
 .flashcard-deck-tab--active,
 .flashcard-deck-tab--active:hover {
-  border-color: #1d4ed8;
-  background-color: #122044;
+  border-color: #dc2626;
+  background-color: #241a15;
   color: white;
 }
 
@@ -1485,8 +1493,8 @@ button:hover {
 .flashcard__boite {
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  background: #f0f4ff;
-  color: #1d4ed8;
+  background: #fff0e0;
+  color: #dc2626;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -1504,19 +1512,19 @@ button:hover {
   flex: 1;
   height: 0.55rem;
   border-radius: 999px;
-  background: #e4e8ee;
+  background: #ece2d6;
   overflow: hidden;
 }
 
 .flashcard-progress__bar div {
   height: 100%;
-  background: linear-gradient(90deg, #1d4ed8, #38bdf8);
+  background: linear-gradient(90deg, #dc2626, #f97316);
   transition: width 250ms ease;
 }
 
 .flashcard-progress span {
   flex: 0 0 auto;
-  color: #536078;
+  color: #6b6259;
   font-size: 0.85rem;
   font-weight: 700;
 }
@@ -1559,28 +1567,28 @@ button:hover {
   justify-content: center;
   gap: 0.75rem;
   padding: 2rem;
-  border: 1px solid #d9e2f8;
+  border: 1px solid #f3ddc8;
   border-radius: 1.25rem;
   background: white;
-  box-shadow: 0 18px 40px rgba(37, 62, 116, 0.1);
+  box-shadow: 0 18px 40px rgba(40, 28, 20, 0.1);
   backface-visibility: hidden;
   text-align: center;
 }
 
 .flashcard__face--recto strong {
-  color: #122044;
+  color: #241a15;
   font-size: 1.6rem;
   letter-spacing: -0.02em;
 }
 
 .flashcard__face--recto small {
-  color: #90a0bd;
+  color: #a89d8e;
   font-size: 0.8rem;
 }
 
 .flashcard__face--verso {
   transform: rotateY(180deg);
-  background: #122044;
+  background: #241a15;
 }
 
 .flashcard__face--verso p {
@@ -1599,7 +1607,7 @@ button:hover {
 
 .flashcard-action {
   padding: 0.75rem 1.4rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 0.75rem;
   background: white;
   font-weight: 750;
@@ -1621,26 +1629,26 @@ button:hover {
 }
 
 .flashcard-remaining {
-  color: #90a0bd;
+  color: #a89d8e;
   font-size: 0.85rem;
   text-align: center;
 }
 
 .flashcard-done {
   padding: 3rem 2rem;
-  border: 1px dashed #cad2e1;
+  border: 1px dashed #e6d7c3;
   border-radius: 1.25rem;
   text-align: center;
 }
 
 .flashcard-done h2 {
   margin: 0 0 0.5rem;
-  color: #122044;
+  color: #241a15;
 }
 
 .flashcard-done p {
   margin: 0 0 1.5rem;
-  color: #69758b;
+  color: #7a7166;
 }
 
 @media (max-width: 550px) {
@@ -1656,7 +1664,7 @@ button:hover {
   gap: 1.25rem;
   padding: 1.5rem 2rem;
   border-radius: 1.25rem;
-  background: linear-gradient(120deg, #122044, #1d4ed8);
+  background: linear-gradient(120deg, #241a15, #dc2626);
   color: white;
   margin-bottom: 2rem;
 }
@@ -1678,7 +1686,7 @@ button:hover {
 }
 
 .streak-banner span {
-  color: #c7d1e8;
+  color: #f3c8a0;
   font-size: 0.85rem;
   font-weight: 650;
 }
@@ -1691,7 +1699,7 @@ button:hover {
 
 .stat-tile {
   padding: 1.1rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 0.9rem;
   background: white;
   text-align: center;
@@ -1699,14 +1707,14 @@ button:hover {
 
 .stat-tile dt {
   margin: 0;
-  color: #122044;
+  color: #241a15;
   font-size: 1.4rem;
   font-weight: 850;
 }
 
 .stat-tile dd {
   margin: 0.3rem 0 0;
-  color: #69758b;
+  color: #7a7166;
   font-size: 0.78rem;
 }
 
@@ -1731,24 +1739,24 @@ button:hover {
 .badge-card strong {
   display: block;
   margin-top: 0.5rem;
-  color: #122044;
+  color: #241a15;
 }
 
 .badge-card p {
   margin: 0.3rem 0 0;
-  color: #69758b;
+  color: #7a7166;
   font-size: 0.85rem;
 }
 
 .badge-card--verrouille {
-  border-color: #dfe4ec;
-  background: #f6f8fb;
+  border-color: #e7ded4;
+  background: #faf5ee;
   box-shadow: none;
   opacity: 0.75;
 }
 
 .badge-card--verrouille strong {
-  color: #8994a8;
+  color: #9c9186;
 }
 
 .progression-reset {
@@ -1769,7 +1777,7 @@ button:hover {
 /* Jeu d'association */
 .jeu-configuration {
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1.25rem;
   background: white;
 }
@@ -1786,7 +1794,7 @@ button:hover {
   margin-bottom: 1.25rem;
   padding: 0.9rem 1.2rem;
   border-radius: 0.9rem;
-  background: #122044;
+  background: #241a15;
   color: white;
   font-weight: 700;
   font-size: 0.9rem;
@@ -1799,7 +1807,7 @@ button:hover {
 
 .jeu-record {
   margin-left: auto;
-  color: #8fb0ff;
+  color: #ffb877;
 }
 
 .memory-grid {
@@ -1818,7 +1826,7 @@ button:hover {
   padding: 0.6rem;
   border: none;
   border-radius: 0.8rem;
-  background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+  background: linear-gradient(135deg, #dc2626, #f97316);
   color: white;
   font-size: 1.4rem;
   font-weight: 800;
@@ -1833,11 +1841,11 @@ button:hover {
 .memory-card--revele,
 .memory-card--revele:hover {
   background: white;
-  color: #172033;
+  color: #241f1c;
   font-size: 0.76rem;
   font-weight: 600;
   line-height: 1.35;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   cursor: default;
   transform: none;
 }
@@ -1880,24 +1888,24 @@ button:hover {
 
 .sprint-question {
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1.25rem;
   background: white;
 }
 
 .sprint-question h2 {
   margin: 0.75rem 0 1.5rem;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(1.3rem, 2.6vw, 1.7rem);
 }
 
 .sprint-choix,
 .sprint-choix:hover {
   padding: 0.9rem 1.1rem;
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 0.8rem;
   background: white;
-  color: #172033;
+  color: #241f1c;
   text-align: left;
   font-size: 0.98rem;
   cursor: pointer;
@@ -1905,7 +1913,7 @@ button:hover {
 }
 
 .sprint-choix:hover:not(:disabled) {
-  border-color: #aebce0;
+  border-color: #d9bd93;
   transform: translateX(2px);
 }
 
@@ -1938,7 +1946,7 @@ button:hover {
 }
 
 .astuce-card {
-  border: 1px solid #dfe4ec;
+  border: 1px solid #e7ded4;
   border-radius: 1rem;
   background: white;
   overflow: hidden;
@@ -1963,7 +1971,7 @@ button:hover {
   position: absolute;
   top: 50%;
   right: 1.4rem;
-  color: #1d4ed8;
+  color: #dc2626;
   content: "+";
   font-size: 1.5rem;
   transform: translateY(-50%);
@@ -1974,12 +1982,12 @@ button:hover {
 }
 
 .astuce-card summary strong {
-  color: #122044;
+  color: #241a15;
   font-size: 1.05rem;
 }
 
 .astuce-card summary small {
-  color: #90a0bd;
+  color: #a89d8e;
   font-size: 0.78rem;
 }
 
@@ -1987,7 +1995,7 @@ button:hover {
   display: grid;
   gap: 0.9rem;
   padding: 0 1.4rem 1.4rem;
-  border-top: 1px solid #edf0f4;
+  border-top: 1px solid #efe6da;
   padding-top: 1.1rem;
 }
 
@@ -2001,7 +2009,7 @@ button:hover {
 .mindmap {
   margin-bottom: 3rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid #e4e8ee;
+  border-bottom: 1px solid #ece2d6;
 }
 
 .mindmap:last-of-type {
@@ -2011,7 +2019,7 @@ button:hover {
 
 .mindmap__titre {
   margin: 0 0 1.5rem;
-  color: #122044;
+  color: #241a15;
   font-size: clamp(1.4rem, 2.6vw, 1.9rem);
   text-align: center;
 }
@@ -2022,23 +2030,23 @@ button:hover {
   margin: 0 auto;
   padding: 1.1rem 1.75rem;
   border-radius: 1.1rem;
-  background: linear-gradient(120deg, #122044, #1d4ed8 60%, #38bdf8);
+  background: linear-gradient(120deg, #241a15, #dc2626 60%, #f97316);
   color: white;
   text-align: center;
   font-weight: 800;
   font-size: 1.1rem;
-  box-shadow: 0 16px 32px rgba(18, 32, 68, 0.22);
+  box-shadow: 0 16px 32px rgba(36, 26, 21, 0.22);
   animation: mindmap-glow 3.5s ease-in-out infinite;
 }
 
 @keyframes mindmap-glow {
-  0%, 100% { box-shadow: 0 16px 32px rgba(18, 32, 68, 0.22); }
-  50% { box-shadow: 0 16px 40px rgba(29, 78, 216, 0.35); }
+  0%, 100% { box-shadow: 0 16px 32px rgba(36, 26, 21, 0.22); }
+  50% { box-shadow: 0 16px 40px rgba(220, 38, 38, 0.35); }
 }
 
 .mindmap__connector {
   margin: 0.5rem 0;
-  color: #aebce0;
+  color: #d9bd93;
   font-size: 1.5rem;
   text-align: center;
   animation: mindmap-bounce 1.8s ease-in-out infinite;
@@ -2060,17 +2068,17 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding: 1.2rem 1.25rem;
-  border-top: 4px solid #1d4ed8;
+  border-top: 4px solid #dc2626;
   border-radius: 1rem;
   background: white;
-  color: #172033;
-  box-shadow: 0 8px 22px rgba(37, 62, 116, 0.07);
+  color: #241f1c;
+  box-shadow: 0 8px 22px rgba(40, 28, 20, 0.07);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .mindmap__branch:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 36px rgba(37, 62, 116, 0.16);
+  box-shadow: 0 20px 36px rgba(40, 28, 20, 0.16);
   text-decoration: none;
 }
 
@@ -2083,7 +2091,7 @@ button:hover {
 .mindmap__branch strong {
   display: block;
   margin-bottom: 0.65rem;
-  color: #122044;
+  color: #241a15;
   font-size: 1rem;
 }
 
@@ -2096,19 +2104,19 @@ button:hover {
 }
 
 .mindmap__branch li {
-  color: #58657a;
+  color: #6d6459;
   font-size: 0.86rem;
   line-height: 1.5;
 }
 
 .mindmap__branch__arrow {
   margin-top: auto;
-  color: #1d4ed8;
+  color: #dc2626;
   font-size: 0.82rem;
   font-weight: 800;
 }
 
-.mindmap__branch--bleu, .mindmap__branch--bleu:hover { border-top-color: #1d4ed8; background: #f5f8ff; }
+.mindmap__branch--rouge, .mindmap__branch--rouge:hover { border-top-color: #dc2626; background: #fff6ed; }
 .mindmap__branch--vert, .mindmap__branch--vert:hover { border-top-color: #0d9277; background: #f2fbf8; }
 .mindmap__branch--orange, .mindmap__branch--orange:hover { border-top-color: #e07b39; background: #fff8f2; }
 .mindmap__branch--violet, .mindmap__branch--violet:hover { border-top-color: #6d3fc0; background: #faf7ff; }
@@ -2169,7 +2177,7 @@ button:hover {
 
   .method-toc a {
     flex: 0 0 auto;
-    border: 1px solid #dfe4ec;
+    border: 1px solid #e7ded4;
     background: white;
   }
 

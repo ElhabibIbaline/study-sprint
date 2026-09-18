@@ -32,9 +32,9 @@ function CoursDetail() {
 
       <h2>Exemples</h2>
       {c.exemples.map((ex, i) => (
-        <div key={i} style={{ marginBottom: "1rem", padding: "1rem", backgroundColor: "#f4f6f8", borderRadius: "8px" }}>
+        <div key={i} style={{ marginBottom: "1rem", padding: "1rem", backgroundColor: "#f7f4f0", borderRadius: "8px" }}>
           <p><strong>{ex.enonce}</strong></p>
-          <p style={{ color: "#1d4ed8" }}>💡 {ex.solution}</p>
+          <p style={{ color: "#dc2626" }}>💡 {ex.solution}</p>
         </div>
       ))}
 

@@ -91,14 +91,14 @@ function AnnaleDetail() {
         return (
           <div key={indexQuestion}>
             {nouvelleCategorie && (
-              <h2 style={{ marginTop: "2.5rem", paddingBottom: "0.5rem", borderBottom: "2px solid #1d4ed8", color: "#1d4ed8" }}>
+              <h2 style={{ marginTop: "2.5rem", paddingBottom: "0.5rem", borderBottom: "2px solid #dc2626", color: "#dc2626" }}>
                 {q.categorie}
               </h2>
             )}
 
             <div className="lesson-section" style={{ marginBottom: "1.25rem" }}>
               <span className="lesson-number">{indexQuestion + 1}</span>
-              <p style={{ fontWeight: 700, color: "#122044" }}>{q.question}</p>
+              <p style={{ fontWeight: 700, color: "#241a15" }}>{q.question}</p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", maxWidth: "500px" }}>
                 {q.choix.map((choix, indexChoix) => {
@@ -107,7 +107,7 @@ function AnnaleDetail() {
                     if (indexChoix === q.bonneReponse) couleur = "#dcf5ed";
                     else if (indexChoix === reponses[indexQuestion]) couleur = "#ffe3e0";
                   } else if (reponses[indexQuestion] === indexChoix) {
-                    couleur = "#dbeafe";
+                    couleur = "#ffe4cc";
                   }
 
                   return (

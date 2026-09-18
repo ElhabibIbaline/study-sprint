@@ -52,7 +52,7 @@ function CasPratiqueDetail() {
               <span className="lesson-number" style={{ marginBottom: 0 }}>{i + 1}</span>
               <span className={`glossary-card__tag ${label.classe}`}>{label.texte}</span>
             </div>
-            <p style={{ fontWeight: 700, color: "#122044", fontSize: "1.05rem" }}>{q.consigne}</p>
+            <p style={{ fontWeight: 700, color: "#241a15", fontSize: "1.05rem" }}>{q.consigne}</p>
             <div className="method-rule"><strong>Conseil de méthode</strong><p>{q.conseil}</p></div>
 
             <textarea

@@ -8,7 +8,7 @@ export const cartesMentales = [
       {
         titre: "Le poste",
         icone: "💼",
-        couleur: "bleu",
+        couleur: "rouge",
         lien: "/concours",
         points: [
           "Catégorie C, 1er niveau de la hiérarchie",
@@ -60,7 +60,7 @@ export const cartesMentales = [
       {
         titre: "Orthographe & langue",
         icone: "🔤",
-        couleur: "bleu",
+        couleur: "rouge",
         lien: "/quiz/orthographe",
         points: [
           "Accords avec avoir / être",
@@ -123,7 +123,7 @@ export const cartesMentales = [
       {
         titre: "Commande",
         icone: "🎯",
-        couleur: "bleu",
+        couleur: "rouge",
         lien: "/methodologie/cas-pratique",
         points: [
           "Verbe, quantité, format, destinataire",
@@ -181,7 +181,7 @@ export const cartesMentales = [
       {
         titre: "Apprendre",
         icone: "📖",
-        couleur: "bleu",
+        couleur: "rouge",
         lien: "/entrainement",
         points: [
           "Cours ciblés (Entraînement)",
@@ -240,7 +240,7 @@ export const cartesMentales = [
       {
         titre: "Fiscalité & impôts",
         icone: "💶",
-        couleur: "bleu",
+        couleur: "rouge",
         lien: "/glossaire",
         points: [
           "TVA, impôt direct / indirect",
@@ -288,7 +288,7 @@ export const cartesMentales = [
       {
         titre: "Les 3 pouvoirs",
         icone: "🏛️",
-        couleur: "bleu",
+        couleur: "rouge",
         lien: "/entrainement/institutions-culture-generale",
         points: [
           "Exécutif : président + gouvernement",
