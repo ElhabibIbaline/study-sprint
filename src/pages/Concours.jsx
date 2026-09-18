@@ -77,6 +77,10 @@ function Concours() {
           Seules les copies déclarées admissibles à une étape sont examinées à l'étape suivante :
           chaque phase élimine une partie des candidats.
         </p>
+        <div className="method-warning">
+          <strong>Note éliminatoire</strong>
+          <p>Une note inférieure à 5/20 à n'importe quelle épreuve élimine le candidat, quel que soit son résultat aux autres épreuves.</p>
+        </div>
         <div className="do-dont">
           <div>
             <strong>Pour t'entraîner sur chaque étape</strong>
@@ -95,6 +99,55 @@ function Concours() {
 
       <section className="lesson-section">
         <span className="lesson-number">04</span>
+        <h2>La réforme entrée en vigueur en 2026 : ce qui change</h2>
+        <p>
+          Le format actuel résulte d'un texte modifié le 28 mars 2026 (les dispositions
+          initiales dataient de 2016). Voici les changements concrets par rapport aux sessions
+          d'avant 2026, vérifiés directement sur le texte réglementaire.
+        </p>
+        <div className="do-dont">
+          <div>
+            <strong>Avant 2026</strong>
+            <p>
+              Le QCM de pré-admissibilité portait d'abord sur l'orthographe, le vocabulaire et
+              la grammaire, avant le calcul et le raisonnement.<br /><br />
+              L'entretien d'admission comptait pour un coefficient 2, à égalité avec le cas
+              pratique.
+            </p>
+          </div>
+          <div>
+            <strong>Depuis 2026</strong>
+            <p>
+              Le QCM est recentré sur les mathématiques et le raisonnement logique, complétés
+              par la culture générale (histoire, géographie, EMC), l'environnement numérique et
+              l'actualité.<br /><br />
+              L'entretien d'admission passe à un coefficient 3 : il pèse désormais plus lourd
+              que le cas pratique (coefficient 2) dans la note finale.
+            </p>
+          </div>
+        </div>
+        <div className="method-rule">
+          <strong>Ce que ça change pour ta préparation</strong>
+          <p>
+            L'orthographe pure recule un peu au profit des mathématiques et de la culture
+            générale/actualité dans le QCM — sans disparaître, elle reste testée dans le cas
+            pratique (qualité rédactionnelle). Et comme l'oral pèse désormais le plus lourd des
+            trois épreuves, il ne doit plus être traité comme un simple entretien de routine.
+          </p>
+        </div>
+        <p className="official-note">
+          Synthèse établie à partir du texte réglementaire consolidé sur{" "}
+          <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032409140" target="_blank" rel="noreferrer">
+            Légifrance
+          </a>{" "}
+          (dernière modification : 28 mars 2026). Certains détails fins (répartition exacte des
+          points par matière, page limite du dossier) peuvent encore varier selon l'avis de
+          concours de ta session — vérifie-le avant de calibrer ta préparation dans le détail.
+        </p>
+      </section>
+
+      <section className="lesson-section">
+        <span className="lesson-number">05</span>
         <h2>Calendrier indicatif — session 2026</h2>
         <div className="time-grid">
           <div><strong>27 avr. – 9 juin 2026</strong><span>Période d'inscription</span></div>
@@ -110,7 +163,7 @@ function Concours() {
       </section>
 
       <section className="lesson-section">
-        <span className="lesson-number">05</span>
+        <span className="lesson-number">06</span>
         <h2>Le jour de l'épreuve : matériel et règles</h2>
         <p>
           Les règles précises figurent sur ta convocation officielle (elles peuvent varier
@@ -155,7 +208,7 @@ function Concours() {
       </section>
 
       <section className="lesson-section lesson-section--final">
-        <span className="lesson-number">06</span>
+        <span className="lesson-number">07</span>
         <h2>Ressources officielles</h2>
         <ul className="check-list">
           <li><a href="https://concours.dgfip.finances.gouv.fr/" target="_blank" rel="noreferrer">Portail d'inscription aux concours de la DGFiP</a></li>

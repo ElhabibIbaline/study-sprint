@@ -53,17 +53,54 @@ function MethodeCasPratique() {
           </section>
 
           <section className="lesson-section" id="synthese">
-            <span className="lesson-number">05</span><h2>Réussir la synthèse</h2>
-            <p>Regroupez plusieurs documents autour d’idées communes. Ne rédigez jamais « document 1, puis document 2 ». Le plan doit découler de la consigne.</p>
-            <div className="plan-grid"><div><strong>Constat / réponses</strong><span>Situation et difficultés, puis solutions.</span></div><div><strong>Avantages / limites</strong><span>Apports, puis risques et correctifs.</span></div><div><strong>Causes / conséquences</strong><span>Facteurs explicatifs, puis effets.</span></div><div><strong>Situation / perspectives</strong><span>État actuel, puis adaptations.</span></div></div>
-            <p>L’introduction présente brièvement le sujet, l’enjeu et le plan. Chaque paragraphe porte une idée principale. La conclusion rappelle le résultat sans ajouter d’idée nouvelle.</p>
+            <span className="lesson-number">05</span><h2>Réussir la synthèse : y a-t-il un plan type ?</h2>
+            <p>Oui : il n'existe pas un plan unique imposé, mais quatre familles de plans couvrent la quasi-totalité des sujets. Le bon choix dépend du verbe et de la logique de la consigne, jamais du hasard.</p>
+
+            <ol className="step-list">
+              <li><strong>1. Reformuler la consigne en une question.</strong><p>« Présentez les enjeux et les réponses apportées » devient : « Quels sont les enjeux de X, et comment y répond-on ? ». Cette question guide tout le plan.</p></li>
+              <li><strong>2. Trier les documents par idée, jamais par numéro.</strong><p>Sur un brouillon, listez 4 à 6 idées-clés et notez sous chacune les documents qui l'alimentent, avec un mot-clé ou un chiffre précis.</p></li>
+              <li><strong>3. Choisir le plan qui correspond à la logique du sujet.</strong><p>Voir les quatre plans types ci-dessous : un seul suffit presque toujours.</p></li>
+              <li><strong>4. Rédiger une introduction courte.</strong><p>Une phrase d'accroche factuelle (un chiffre ou un constat du dossier), la question posée, puis l'annonce des 2 ou 3 parties.</p></li>
+              <li><strong>5. Rédiger le développement, un paragraphe = une idée.</strong><p>Chaque paragraphe suit la même mécanique : l'idée en une phrase → un argument ou une explication → une preuve chiffrée ou citée du dossier.</p></li>
+              <li><strong>6. Conclure sans idée nouvelle.</strong><p>Une ou deux phrases qui répondent explicitement à la question posée en introduction — rien de plus.</p></li>
+            </ol>
+
+            <div className="method-rule"><strong>Les 4 plans types</strong><p>Identifiez lequel correspond à votre sujet avant d'écrire la moindre ligne.</p></div>
+            <div className="plan-grid">
+              <div><strong>Constat / réponses</strong><span>Sujet « Quels problèmes, quelles solutions ? » — la situation et ses difficultés, puis les réponses apportées.</span></div>
+              <div><strong>Avantages / limites</strong><span>Sujet « Faut-il... ? », « Quel bilan ? » — les apports d'une mesure, puis ses risques ou ses limites.</span></div>
+              <div><strong>Causes / conséquences</strong><span>Sujet « Pourquoi... ? », « Quels effets ? » — les facteurs explicatifs, puis leurs effets concrets.</span></div>
+              <div><strong>Situation / perspectives</strong><span>Sujet « Où en est-on ? », « Quelle évolution ? » — l'état actuel, puis les adaptations à venir.</span></div>
+            </div>
+
+            <div className="example-box">
+              <span>Voir un exemple complet</span>
+              <p>Une synthèse entièrement rédigée, avec son plan et son corrigé indicatif, est disponible dans l'<Link to="/cas-pratique">exercice de cas pratique</Link>.</p>
+            </div>
           </section>
 
           <section className="lesson-section" id="support">
-            <span className="lesson-number">06</span><h2>Réussir un support de communication</h2>
-            <p>Le support doit être immédiatement utilisable. Écrivez d’abord : qui parle, à qui, dans quel but, quelles informations et quelle action attendue.</p>
-            <ul className="check-list"><li><strong>Courriel :</strong> objet, formule d’appel, contexte, informations, modalités et conclusion.</li><li><strong>Fiche :</strong> titre, objectif, public, étapes, délais et précautions.</li><li><strong>Document visuel :</strong> titre clair, zones courtes, chiffres clés et hiérarchie visible.</li></ul>
+            <span className="lesson-number">06</span><h2>Réussir un support de communication : quel plan pour quel format ?</h2>
+            <p>Contrairement à la synthèse, un support de communication ne se construit pas en parties argumentées : il suit un gabarit fixe, propre à son format. Commencez toujours par identifier qui parle, à qui, dans quel but, avec quelles informations et pour quelle action attendue.</p>
+
+            <div className="plan-grid">
+              <div><strong>Courriel</strong><span>Objet → formule d'appel → contexte en une phrase → informations classées (puces si possible) → action ou délai attendu → formule de politesse.</span></div>
+              <div><strong>Fiche informative</strong><span>Titre → objectif en une phrase → public visé → étapes numérotées → délais et précautions → contact utile.</span></div>
+              <div><strong>Note de service</strong><span>Objet → rappel bref du contexte → consigne(s) précise(s) → date d'application → signataire.</span></div>
+              <div><strong>Support visuel (affiche, encart)</strong><span>Titre accrocheur et court → message clé unique → 2-3 chiffres ou repères → coordonnées ou renvoi pour en savoir plus.</span></div>
+            </div>
+
+            <ul className="check-list">
+              <li>Une idée par ligne ou par puce : jamais de paragraphe dense dans un support.</li>
+              <li>Le ton reste neutre et factuel, même dans un format court.</li>
+              <li>L'action attendue du lecteur doit être explicite et non déductible.</li>
+            </ul>
             <div className="method-rule"><strong>Action ≠ indicateur</strong><p>Une action décrit ce que le service fait. Un indicateur décrit ce qui sera mesuré.</p></div>
+
+            <div className="example-box">
+              <span>Voir un exemple complet</span>
+              <p>Un courriel type entièrement rédigé, avec son corrigé indicatif, est disponible dans l'<Link to="/cas-pratique">exercice de cas pratique</Link>.</p>
+            </div>
           </section>
 
           <section className="lesson-section" id="calculs">
