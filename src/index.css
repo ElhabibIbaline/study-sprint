@@ -151,9 +151,9 @@ button:hover {
   max-width: 720px;
   margin: 0;
   color: #122044;
-  font-size: clamp(2.75rem, 5.7vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  font-size: clamp(2rem, 3.6vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
 }
 
 .home-lead {
@@ -524,7 +524,7 @@ button:hover {
   }
 
   .home-hero h1 {
-    font-size: clamp(2.55rem, 13vw, 3.8rem);
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
   }
 
   .home-actions,
@@ -583,9 +583,9 @@ button:hover {
 .learning-hero h1 {
   margin: 0;
   color: #122044;
-  font-size: clamp(2.7rem, 6vw, 5rem);
-  line-height: 1;
-  letter-spacing: -0.055em;
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .learning-hero > p:last-child,
@@ -2017,16 +2017,23 @@ button:hover {
 }
 
 .mindmap__hub {
+  position: relative;
   max-width: 460px;
   margin: 0 auto;
   padding: 1.1rem 1.75rem;
   border-radius: 1.1rem;
-  background: linear-gradient(120deg, #122044, #1d4ed8);
+  background: linear-gradient(120deg, #122044, #1d4ed8 60%, #38bdf8);
   color: white;
   text-align: center;
   font-weight: 800;
   font-size: 1.1rem;
-  box-shadow: 0 16px 32px rgba(18, 32, 68, 0.18);
+  box-shadow: 0 16px 32px rgba(18, 32, 68, 0.22);
+  animation: mindmap-glow 3.5s ease-in-out infinite;
+}
+
+@keyframes mindmap-glow {
+  0%, 100% { box-shadow: 0 16px 32px rgba(18, 32, 68, 0.22); }
+  50% { box-shadow: 0 16px 40px rgba(29, 78, 216, 0.35); }
 }
 
 .mindmap__connector {
@@ -2034,20 +2041,43 @@ button:hover {
   color: #aebce0;
   font-size: 1.5rem;
   text-align: center;
+  animation: mindmap-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes mindmap-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
 .mindmap__branches {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1rem;
 }
 
-.mindmap__branch {
-  padding: 1.1rem 1.25rem;
+.mindmap__branch,
+.mindmap__branch:hover {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.25rem;
   border-top: 4px solid #1d4ed8;
   border-radius: 1rem;
   background: white;
+  color: #172033;
   box-shadow: 0 8px 22px rgba(37, 62, 116, 0.07);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.mindmap__branch:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 36px rgba(37, 62, 116, 0.16);
+  text-decoration: none;
+}
+
+.mindmap__branch__icone {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .mindmap__branch strong {
@@ -2058,10 +2088,11 @@ button:hover {
 }
 
 .mindmap__branch ul {
-  margin: 0;
+  margin: 0 0 0.85rem;
   padding-left: 1.1rem;
   display: grid;
   gap: 0.4rem;
+  flex: 1;
 }
 
 .mindmap__branch li {
@@ -2070,11 +2101,30 @@ button:hover {
   line-height: 1.5;
 }
 
-.mindmap__branch--bleu { border-top-color: #1d4ed8; background: #f5f8ff; }
-.mindmap__branch--vert { border-top-color: #0d9277; background: #f2fbf8; }
-.mindmap__branch--orange { border-top-color: #e07b39; background: #fff8f2; }
-.mindmap__branch--violet { border-top-color: #6d3fc0; background: #faf7ff; }
-.mindmap__branch--or { border-top-color: #c99a1a; background: #fffbf0; }
+.mindmap__branch__arrow {
+  margin-top: auto;
+  color: #1d4ed8;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.mindmap__branch--bleu, .mindmap__branch--bleu:hover { border-top-color: #1d4ed8; background: #f5f8ff; }
+.mindmap__branch--vert, .mindmap__branch--vert:hover { border-top-color: #0d9277; background: #f2fbf8; }
+.mindmap__branch--orange, .mindmap__branch--orange:hover { border-top-color: #e07b39; background: #fff8f2; }
+.mindmap__branch--violet, .mindmap__branch--violet:hover { border-top-color: #6d3fc0; background: #faf7ff; }
+.mindmap__branch--or, .mindmap__branch--or:hover { border-top-color: #c99a1a; background: #fffbf0; }
+
+.mindmap__cta {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mindmap__hub,
+  .mindmap__connector {
+    animation: none;
+  }
+}
 
 @media (max-width: 650px) {
   .method-choice-grid,
