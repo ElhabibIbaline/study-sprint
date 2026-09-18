@@ -70,4 +70,76 @@ export const casPratiques = {
       },
     ],
   },
+
+  "hameconnage-fiscal": {
+    titre: "La protection des usagers face aux tentatives d'hameçonnage fiscal",
+    duree: "3 h (indicatif)",
+    commande:
+      "Vous êtes affecté(e) au sein d'un centre de contact de la DGFiP. Face à la recrudescence des tentatives d'hameçonnage (phishing) usurpant l'identité de l'administration fiscale, votre chef de service vous transmet un dossier documentaire et vous demande de traiter les questions suivantes, en vue d'une campagne de sensibilisation des usagers.",
+    documents: [
+      {
+        titre: "Document 1 — Extrait d'une note de suivi de la DGFiP",
+        contenu:
+          "En 2024, plus de 40 000 signalements de tentatives d'hameçonnage usurpant l'identité de l'administration fiscale ont été recensés, soit une hausse de 20 % par rapport à l'année précédente. Ces messages frauduleux, envoyés par courriel ou par SMS, visent le plus souvent à obtenir les coordonnées bancaires de l'usager sous prétexte d'un remboursement d'impôt.",
+      },
+      {
+        titre: "Document 2 — Témoignage d'un usager",
+        contenu:
+          "« J'ai reçu un SMS m'annonçant un remboursement de 220 euros. Le lien renvoyait vers une page qui ressemblait beaucoup au site des impôts, avec le même logo. J'ai renseigné mes coordonnées bancaires avant de me rendre compte que l'adresse du site n'était pas la bonne. »",
+      },
+      {
+        titre: "Document 3 — Extrait d'un guide de sensibilisation à la cybersécurité",
+        contenu:
+          "Un message frauduleux présente souvent plusieurs signes caractéristiques : une adresse d'expéditeur qui ne correspond pas à un domaine officiel, des fautes d'orthographe ou une mise en forme approximative, un lien raccourci ou légèrement différent de l'adresse habituelle, et un sentiment d'urgence entretenu par le message (délai très court, menace de pénalité).",
+      },
+      {
+        titre: "Document 4 — Extrait des consignes officielles de la DGFiP",
+        contenu:
+          "L'administration fiscale ne demande jamais par courriel ou par SMS de communiquer des coordonnées bancaires, un mot de passe ou un code confidentiel. Tout message suspect peut être signalé sur la plateforme officielle de signalement, sans cliquer sur les liens qu'il contient.",
+      },
+    ],
+    questions: [
+      {
+        type: "courte",
+        consigne:
+          "À l'aide du document 1, relevez deux chiffres illustrant l'ampleur du phénomène d'hameçonnage usurpant l'identité de l'administration fiscale.",
+        conseil: "Réponse directe (les deux chiffres), puis une phrase d'interprétation.",
+        corrige:
+          "Plus de 40 000 signalements de tentatives d'hameçonnage ont été recensés en 2024, soit une hausse de 20 % par rapport à l'année précédente. Ces chiffres montrent un phénomène en nette progression.",
+      },
+      {
+        type: "courte",
+        consigne:
+          "Identifiez, à partir du document 3, trois éléments qui doivent alerter un usager face à un message suspect.",
+        conseil: "Trois éléments distincts, numérotés, chacun appuyé sur le dossier.",
+        corrige:
+          "Premièrement, une adresse d'expéditeur qui ne correspond pas à un domaine officiel. Deuxièmement, des fautes d'orthographe ou une mise en forme approximative. Troisièmement, un lien raccourci ou différent de l'adresse habituelle, souvent associé à un sentiment d'urgence entretenu par le message.",
+      },
+      {
+        type: "courte",
+        consigne: "À l'aide du document 4, citez deux réflexes que doit adopter un usager recevant un message suspect.",
+        conseil: "Nommer précisément les réflexes attendus, sans en inventer d'autres non mentionnés dans le dossier.",
+        corrige:
+          "L'usager ne doit jamais communiquer de coordonnées bancaires, mot de passe ou code confidentiel par courriel ou SMS, l'administration ne le demandant jamais par ce moyen. Il peut également signaler le message sur la plateforme officielle de signalement, sans cliquer sur les liens qu'il contient.",
+      },
+      {
+        type: "synthese",
+        consigne:
+          "En vous appuyant sur l'ensemble du dossier, rédigez une note de synthèse d'environ 250 mots présentant l'ampleur du phénomène d'hameçonnage fiscal et les moyens de s'en protéger.",
+        conseil:
+          "Plan constat / réponses : d'abord l'ampleur et les mécanismes du phénomène (docs 1, 2, 3), puis les réponses et bons réflexes (docs 3, 4).",
+        corrige:
+          "Les tentatives d'hameçonnage usurpant l'identité de l'administration fiscale sont en nette progression : plus de 40 000 signalements ont été recensés en 2024, soit une hausse de 20 % par rapport à l'année précédente (doc. 1). Ces messages frauduleux, envoyés par courriel ou par SMS, promettent le plus souvent un remboursement d'impôt pour inciter l'usager à communiquer ses coordonnées bancaires, comme l'illustre le témoignage d'un usager ayant renseigné ses données sur un site imitant celui des impôts (doc. 2).\n\nCes messages présentent cependant des signes caractéristiques qui permettent de les identifier : une adresse d'expéditeur non officielle, des fautes d'orthographe, un lien suspect et un sentiment d'urgence entretenu artificiellement (doc. 3).\n\nFace à ce phénomène, l'administration rappelle une règle simple : elle ne demande jamais de coordonnées bancaires ou de code confidentiel par courriel ou SMS. Tout message suspect peut être signalé sur la plateforme officielle, sans cliquer sur les liens qu'il contient (doc. 4).\n\nAinsi, si l'hameçonnage fiscal touche un nombre croissant d'usagers, des réflexes simples et une bonne connaissance des pratiques de l'administration permettent de s'en prémunir efficacement.",
+      },
+      {
+        type: "support",
+        consigne:
+          "Rédigez une fiche informative destinée à être affichée dans la salle d'attente du service, présentant aux usagers les bons réflexes pour repérer un message frauduleux usurpant l'identité de la DGFiP.",
+        conseil:
+          "Une fiche informative suit un gabarit fixe : titre, objectif, public visé, puis les points clés sous forme de liste courte — jamais de paragraphe dense.",
+        corrige:
+          "LES BONS RÉFLEXES FACE AUX MESSAGES FRAUDULEUX\n\nObjectif : vous aider à identifier un courriel ou SMS usurpant l'identité de l'administration fiscale.\n\nPublic : tous les usagers.\n\nCe qui doit vous alerter :\n— Une adresse d'expéditeur inhabituelle\n— Des fautes d'orthographe ou une mise en page approximative\n— Un lien raccourci ou une adresse différente du site officiel\n— Un message urgent promettant un remboursement ou menaçant d'une pénalité\n\nÀ retenir : l'administration fiscale ne vous demande jamais vos coordonnées bancaires, un mot de passe ou un code confidentiel par courriel ou par SMS.\n\nEn cas de doute : ne cliquez sur aucun lien et signalez le message sur la plateforme officielle de signalement.",
+      },
+    ],
+  },
 };

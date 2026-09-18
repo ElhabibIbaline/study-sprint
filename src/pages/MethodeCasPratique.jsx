@@ -10,6 +10,12 @@ const chapitres = [
   ["controle", "13. Contrôle final"],
 ];
 
+function allerVersSection(event, id) {
+  event.preventDefault();
+  const cible = document.getElementById(id);
+  if (cible) cible.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function MethodeCasPratique() {
   return (
     <div className="learning-page">
@@ -20,7 +26,7 @@ function MethodeCasPratique() {
       </header>
 
       <div className="method-layout">
-        <nav className="method-toc" aria-label="Sommaire du cas pratique"><span>Sommaire</span>{chapitres.map(([id, titre]) => <a key={id} href={`#${id}`}>{titre}</a>)}</nav>
+        <nav className="method-toc" aria-label="Sommaire du cas pratique"><span>Sommaire</span>{chapitres.map(([id, titre]) => <a key={id} href={`#${id}`} onClick={(e) => allerVersSection(e, id)}>{titre}</a>)}</nav>
         <article className="method-content">
           <section className="lesson-section" id="attentes">
             <span className="lesson-number">01</span><h2>Ce que le correcteur évalue</h2>
@@ -81,6 +87,12 @@ function MethodeCasPratique() {
 
           <section className="lesson-section" id="support">
             <span className="lesson-number">06</span><h2>Réussir un support de communication : quel plan pour quel format ?</h2>
+            <p className="official-note" style={{ textAlign: "left" }}>
+              Le texte officiel mentionne cette épreuve « le cas échéant » — elle est un peu moins
+              systématique que la synthèse, mais reste apparue dans la plupart des sessions
+              récentes. Détail sur <Link to="/concours">la page Concours</Link>. Prépare-la comme
+              si elle allait tomber.
+            </p>
             <p>Contrairement à la synthèse, un support de communication ne se construit pas en parties argumentées : il suit un gabarit fixe, propre à son format. Commencez toujours par identifier qui parle, à qui, dans quel but, avec quelles informations et pour quelle action attendue.</p>
 
             <div className="plan-grid">

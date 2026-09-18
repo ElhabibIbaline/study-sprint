@@ -135,6 +135,41 @@ function Concours() {
             trois épreuves, il ne doit plus être traité comme un simple entretien de routine.
           </p>
         </div>
+
+        <h3 style={{ marginTop: "2.5rem", color: "#241a15" }}>Et pour le cas pratique en particulier ?</h3>
+        <div className="do-dont">
+          <div>
+            <strong>Avant 2026</strong>
+            <p>
+              Le dossier documentaire était explicitement limité à 15 pages maximum. L'épreuve
+              pouvait porter sur des réponses à des questions, la rédaction de documents ou la
+              construction de tableaux chiffrés — l'accent portait davantage sur le
+              traitement de données.
+            </p>
+          </div>
+          <div>
+            <strong>Depuis 2026</strong>
+            <p>
+              Le texte met désormais explicitement en avant trois composantes possibles :
+              réponses à des questions sur le dossier, rédaction d'une synthèse de documents et,
+              le cas échéant, élaboration d'un support de communication. L'accent se déplace
+              vers l'analyse et la communication plutôt que le seul chiffrage.
+            </p>
+          </div>
+        </div>
+        <div className="method-warning">
+          <strong>La synthèse et le support sont-ils obligatoires à chaque session ?</strong>
+          <p>
+            Le texte réglementaire est précis sur ce point : l'épreuve porte sur un dossier
+            « <em>pouvant comporter la réponse à des questions sur ce dossier, la rédaction
+            d'une synthèse de documents et, le cas échéant, l'élaboration d'un support de
+            communication</em> ». Les questions courtes et la synthèse sont donc les composantes
+            les plus stables d'une session à l'autre ; le support de communication est
+            explicitement conditionné par « le cas échéant », ce qui le rend théoriquement moins
+            systématique. En pratique, il est apparu dans la plupart des sessions récentes —
+            <strong> prépare-toi aux deux</strong> plutôt que de parier sur son absence.
+          </p>
+        </div>
         <p className="official-note">
           Synthèse établie à partir du texte réglementaire consolidé sur{" "}
           <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000032409140" target="_blank" rel="noreferrer">

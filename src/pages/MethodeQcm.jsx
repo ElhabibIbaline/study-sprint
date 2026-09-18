@@ -1,5 +1,22 @@
 import { Link } from "react-router-dom";
 
+const chapitresQcm = [
+  ["objectif-qcm", "Ce qui est évalué"],
+  ["strategie-qcm", "Les trois passages"],
+  ["temps-qcm", "Chronomètre"],
+  ["doute-qcm", "Gérer le doute"],
+  ["domaines-qcm", "Méthode par domaine"],
+  ["pieges-qcm", "Pièges fréquents"],
+  ["entrainement-qcm", "Plan d’entraînement"],
+  ["controle-qcm", "Contrôle final"],
+];
+
+function allerVersSection(event, id) {
+  event.preventDefault();
+  const cible = document.getElementById(id);
+  if (cible) cible.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function MethodeQcm() {
   return (
     <div className="learning-page">
@@ -11,7 +28,8 @@ function MethodeQcm() {
 
       <div className="method-layout">
         <nav className="method-toc" aria-label="Sommaire de la méthode QCM">
-          <span>Sommaire</span><a href="#objectif-qcm">Ce qui est évalué</a><a href="#strategie-qcm">Les trois passages</a><a href="#temps-qcm">Chronomètre</a><a href="#doute-qcm">Gérer le doute</a><a href="#domaines-qcm">Méthode par domaine</a><a href="#pieges-qcm">Pièges fréquents</a><a href="#entrainement-qcm">Plan d’entraînement</a><a href="#controle-qcm">Contrôle final</a>
+          <span>Sommaire</span>
+          {chapitresQcm.map(([id, titre]) => <a key={id} href={`#${id}`} onClick={(e) => allerVersSection(e, id)}>{titre}</a>)}
         </nav>
 
         <article className="method-content">
