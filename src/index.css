@@ -1268,6 +1268,94 @@ button:hover {
   white-space: pre-line;
 }
 
+.data-table-wrap {
+  margin-top: 1.1rem;
+  overflow-x: auto;
+  border-radius: 0.8rem;
+  border: 1px solid #ece2d6;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.data-table caption {
+  padding: 0.7rem 1rem;
+  background: #faf5ee;
+  color: #241a15;
+  font-weight: 800;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-top: 1px solid #ece2d6;
+  color: #4a423a;
+}
+
+.data-table thead th {
+  background: #fff4eb;
+  color: #241a15;
+  border-top: none;
+  font-weight: 800;
+}
+
+.data-table tbody tr:last-child {
+  font-weight: 800;
+  background: #faf5ee;
+}
+
+.chart-figure {
+  margin-top: 1.1rem;
+  padding: 1.1rem;
+  border-radius: 0.8rem;
+  background: #faf5ee;
+  text-align: center;
+}
+
+.chart-figure figcaption {
+  margin-top: 0.6rem;
+  color: #6d6459;
+  font-size: 0.85rem;
+}
+
+.chart-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.chart-types-grid > div {
+  padding: 1rem;
+  border-radius: 0.85rem;
+  background: #faf5ee;
+  text-align: center;
+}
+
+.chart-types-grid strong {
+  display: block;
+  margin-top: 0.6rem;
+  color: #241a15;
+}
+
+.chart-types-grid p {
+  margin: 0.35rem 0 0;
+  color: #6d6459;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .chart-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Pages de listes (Entraînement, Quiz, Annales, Liens) */
 .hub-grid {
   display: grid;

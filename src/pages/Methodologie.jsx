@@ -30,6 +30,16 @@ function Methodologie() {
         </Link>
       </section>
 
+      <section className="article-cta" style={{ marginTop: "2.5rem" }}>
+        <div>
+          <p className="home-eyebrow">Module transversal, commun aux deux épreuves</p>
+          <h2>Tableaux et graphiques : la méthode pour les lire, les commenter et les construire.</h2>
+        </div>
+        <Link className="home-button home-button--primary" to="/methodologie/tableaux-graphiques">
+          Étudier le module
+        </Link>
+      </section>
+
       <section className="learning-routine" aria-labelledby="routine-title">
         <div><p className="home-eyebrow">Routine recommandée</p><h2 id="routine-title">Une séance utile en 45 minutes</h2></div>
         <ol><li><span>10 min</span><strong>Relire une règle de méthode</strong></li><li><span>25 min</span><strong>L’appliquer sur un exercice</strong></li><li><span>10 min</span><strong>Corriger et noter l’erreur</strong></li></ol>

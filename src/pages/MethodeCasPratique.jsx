@@ -120,6 +120,10 @@ function MethodeCasPratique() {
             <p>Présentez toujours l’opération, le résultat, l’unité et une phrase d’interprétation. Un taux passant de 20 % à 25 % gagne 5 points, mais augmente relativement de 25 %.</p>
             <ul className="check-list"><li><strong>Courbe :</strong> évolution dans le temps.</li><li><strong>Barres :</strong> comparaison de catégories.</li><li><strong>Diagramme circulaire :</strong> répartition d’un total.</li></ul>
             <p>Un graphique complet comporte un titre, des axes, des unités, une échelle régulière, des valeurs lisibles et une légende si nécessaire.</p>
+            <div className="example-box">
+              <span>Besoin de t'entraîner davantage ?</span>
+              <p>Un module complet dédié à la lecture, au commentaire et à la construction de tableaux et graphiques, avec 6 exercices corrigés en détail, est disponible <Link to="/methodologie/tableaux-graphiques">ici</Link>.</p>
+            </div>
           </section>
 
           <section className="lesson-section" id="style">
