@@ -27,9 +27,14 @@ function CasPratique() {
           <p className="home-eyebrow">Revoir la méthode d'abord</p>
           <h2>Pas encore à l'aise avec la méthode du cas pratique ?</h2>
         </div>
-        <Link className="home-button home-button--primary" to="/methodologie/cas-pratique">
-          Revoir la méthode
-        </Link>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <Link className="home-button home-button--light" to="/faq">
+            Voir la FAQ
+          </Link>
+          <Link className="home-button home-button--primary" to="/methodologie/cas-pratique">
+            Revoir la méthode
+          </Link>
+        </div>
       </section>
     </div>
   );

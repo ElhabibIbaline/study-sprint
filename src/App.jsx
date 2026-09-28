@@ -22,6 +22,7 @@ import Annales from "./pages/Annales";
 import AnnaleDetail from "./pages/AnnaleDetail";
 import Entrainement from "./pages/Entrainement";
 import CoursDetail from "./pages/CoursDetail";
+import FAQ from "./pages/FAQ";
 import Footer from "./components/Footer";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="/cartes-mentales" element={<CartesMentales />} />
           <Route path="/cas-pratique" element={<CasPratique />} />
           <Route path="/cas-pratique/:id" element={<CasPratiqueDetail />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/liens" element={<Liens />} />
