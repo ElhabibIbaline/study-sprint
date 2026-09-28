@@ -64,6 +64,10 @@ function MethodeQcm() {
           <section className="lesson-section" id="pieges-qcm">
             <span className="lesson-number">06</span><h2>Neutraliser les pièges fréquents</h2>
             <ul className="check-list"><li>Lire les négations : « ne… pas », « sauf », « incorrect ».</li><li>Se méfier des mots absolus : toujours, jamais, uniquement, tous.</li><li>Calculer un pourcentage par rapport à la valeur de départ.</li><li>Distinguer hausse en points et hausse en pourcentage.</li><li>Ne pas conclure l’inverse d’une implication logique.</li><li>Contrôler le numéro de question avant de cocher.</li></ul>
+            <div className="example-box">
+              <span>Module dédié</span>
+              <p>Chevauchements, position dans une file, proportionnalité à deux grandeurs, pourcentages successifs : un module complet avec schémas et 11 exercices corrigés en détail est disponible <Link to="/methodologie/pieges-maths-logique">ici</Link>.</p>
+            </div>
           </section>
 
           <section className="lesson-section" id="entrainement-qcm">
