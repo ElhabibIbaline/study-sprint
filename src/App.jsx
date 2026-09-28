@@ -18,6 +18,7 @@ import Astuces from "./pages/Astuces";
 import CartesMentales from "./pages/CartesMentales";
 import Liens from "./pages/Liens";
 import QuizCategories from "./pages/QuizCategories";
+import SujetZero from "./pages/SujetZero";
 import Annales from "./pages/Annales";
 import AnnaleDetail from "./pages/AnnaleDetail";
 import Entrainement from "./pages/Entrainement";
@@ -39,6 +40,7 @@ function App() {
           <Route path="/jeu-association" element={<JeuAssociation />} />
           <Route path="/quiz" element={<QuizCategories />} />
           <Route path="/quiz/:categorie" element={<Quiz />} />
+          <Route path="/sujet-0" element={<SujetZero />} />
           <Route path="/sprint" element={<Sprint />} />
           <Route path="/methodologie" element={<Methodologie />} />
           <Route path="/methodologie/cas-pratique" element={<MethodeCasPratique />} />

@@ -10,6 +10,14 @@ function QuizCategories() {
         <p>Choisis une catégorie pour t'entraîner, avec un résultat immédiat à chaque question.</p>
       </header>
 
+      <section className="article-cta" style={{ marginBottom: "2.5rem" }}>
+        <div>
+          <p className="home-eyebrow">Épreuve blanche complète</p>
+          <h2>Sujet 0 officiel 2026 : les 50 questions réelles, en conditions de concours.</h2>
+        </div>
+        <Link className="home-button home-button--primary" to="/sujet-0">Faire le sujet 0</Link>
+      </section>
+
       <div className="hub-grid">
         {Object.keys(categoriesInfo).map((cle) => (
           <Link key={cle} to={`/quiz/${cle}`} className="hub-card">
